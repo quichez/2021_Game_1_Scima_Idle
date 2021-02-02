@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1367bd4822e987478263cd7ae4c83b4, type: 3}
+  m_Name: Robot Table 1
+  m_EditorClassIdentifier: 
+  EnemyList:
+  - {fileID: 5596701501260257170, guid: 8e6f4e2ceb636d04a8b19c76dcb53f13, type: 3}
+  - {fileID: 5596701501260257170, guid: 8c9e8bf9185d4194bbe832780e233932, type: 3}
+  - {fileID: 5596701501260257170, guid: 65a76addaef23d4478b3ee0ae9b5a8a5, type: 3}

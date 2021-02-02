@@ -1,0 +1,14 @@
+Game 1 Scima Idle Bug List
+- equip/unequip of item does not change current display value of cost
+- drops on kill don't update inv panel if not on item
+- IdlerUpgradeGroup - why can't i make the list of subclass work :/
+- does RoundBigNumber work? stay tuned ryan sucks
+
+
+Features that I never quite figured out
+- How to use T : F<T> for items
+- how to make weighted roll even more (less) retarded
+- optimize updates to DPS/DPF
+- consider a framework for backing BigNumber<int> implementation? or leave Rounded as is.
+- how to subscribe a method to the OnClick callback in script
+

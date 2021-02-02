@@ -1,0 +1,168 @@
+[
+    {
+    "id": 100,
+    "title": "Small Hat",
+    "desc": "A small hat",
+    "slug": "small_hat",
+    "equip_type": "hat",
+    "stats":
+        {
+        "damage": {"min": 1.01,"max": 1.05},
+        "mana":   {"min": 1.01,"max": 1.05},
+        "cost":   {"min": 1.01, "max": 1.05}
+        }
+    },
+    {
+    "id": 101,
+    "title": "Worn-Out Hat",
+    "desc": "A worn-out hat",
+    "slug": "worn_out_hat",
+    "equip_type": "hat",
+    "stats":
+    {
+        "damage":
+        {
+            "min": 1.01,
+            "max": 1.05
+        },
+        "mana":
+        {
+            "min": 1.01,
+            "max": 1.05
+        },
+        "cost":
+        {
+            "min": 1.01,
+            "max": 1.05
+        }
+    }    
+    },
+    {
+    "id": 102,
+    "title": "Fancy Hat",
+    "desc": "A fancy tophat",
+    "slug": "fancy_hat",
+    "equip_type": "hat",
+    "stats":
+    {
+        "damage":
+        {
+            "min": 1.01,
+            "max": 1.05
+        },
+        "mana":
+        {
+            "min": 1.01,
+            "max": 1.05
+        },
+        "cost":
+        {
+            "min": 1.01,
+            "max": 1.05
+        }
+    }    
+    },
+    {
+    "id": 103,
+    "title": "Donut Hat",
+    "desc": "A pink frosted sprinkled donut",
+    "slug": "donut_hat",
+    "equip_type": "hat",
+    "stats":
+    {
+        "damage":
+        {
+            "min": 1.1,
+            "max": 1.5
+        },
+        "mana":
+        {
+            "min": 1.2,
+            "max": 1.4
+        },
+        "cost":
+        {
+            "min": 1.10,
+            "max": 1.30
+        }
+    }    
+    },
+    {
+    "id": 200,
+    "title": "Light Coat",
+    "desc": "Slight protection from the wind.",
+    "slug": "light_coat",
+    "equip_type": "chest",
+    "stats":
+        {
+        "damage":{"min": 1.05,"max": 1.30},
+        "mana":  {"min": 1.20,"max": 1.45},
+        "cost":  {"min": 1.10,"max": 1.25}
+        }
+    },
+    {
+    "id": 201,
+    "title": "Worn-Out Coat",
+    "desc": "A tattered coat, but better than nothing.",
+    "slug": "worn_out_coat",
+    "equip_type": "chest",
+    "stats":
+        {
+        "damage":{"min": 1.05,"max": 1.20},
+        "mana":  {"min": 1.05,"max": 1.25},
+        "cost":  {"min": 1.10,"max": 1.35}
+        }
+    },
+    {
+    "id": 300,
+    "title": "Leather Sandals",
+    "desc": "They fit well, but they don't feel good.",
+    "slug": "leather_sandals",
+    "equip_type": "boots",
+    "stats":
+        {
+        "damage":{"min": 1.05,"max": 1.20},
+        "mana":  {"min": 1.05,"max": 1.35},
+        "cost":  {"min": 1.10,"max": 1.35}
+        }
+    },
+    {
+    "id": 400,
+    "title": "Stoopid Sword",
+    "desc": "Makes yuo dumb.",
+    "slug": "stupid_sword",
+    "equip_type": "weapon",
+    "stats":
+        {
+        "damage":{"min": 1.15,"max": 1.50},
+        "mana":  {"min": 1.05,"max": 1.35},
+        "cost":  {"min": 1.10,"max": 1.35}
+        }
+    },
+    {
+    "id": 500,
+    "title": "Gloveless Fingers",
+    "desc": "These gloves don't feel right.",
+    "slug": "gloveless_fingers",
+    "equip_type": "gloves",
+    "stats":
+        {
+        "damage":{"min": 1.05,"max": 1.20},
+        "mana":  {"min": 1.05,"max": 1.35},
+        "cost":  {"min": 1.10,"max": 1.35}
+        }
+    },
+    {
+    "id": 666,
+    "title": "Jetpack Pengin",
+    "desc": "This is so awesome.",
+    "slug": "jetpack_pengin",
+    "equip_type": "accesory",
+    "stats":
+        {
+        "damage":{"min": 1.05,"max": 1.20},
+        "mana":  {"min": 1.05,"max": 1.35},
+        "cost":  {"min": 1.10,"max": 1.35}
+        }
+    }         
+]

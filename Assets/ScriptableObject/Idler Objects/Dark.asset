@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f541b8d3b6a7e9e4a835fd3ef78b7976, type: 3}
+  m_Name: Dark
+  m_EditorClassIdentifier: 
+  IdlerName: 0
+  Icon: {fileID: 21300000, guid: ebe0fb3d737fb5e4bb6ed09d9aa9367b, type: 3}
+  DamageMantissa: 5.3
+  DamageExponent: 4
+  CostMantissa: 1.5
+  CostExponent: 5
+  ManaMantissa: 8
+  ManaExponent: 4
+  CostScale: 1.07
+  UpgradesUnlocked: 000000000000
