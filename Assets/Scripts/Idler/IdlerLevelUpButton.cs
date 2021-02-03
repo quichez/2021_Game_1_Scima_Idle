@@ -8,7 +8,15 @@ public class IdlerLevelUpButton : MonoBehaviour
 {
     private Idler _idler => transform.GetComponentInParent<Idler>();
     private Button _button => GetComponent<Button>();
-    private TextMeshProUGUI _text => GetComponentInChildren<TextMeshProUGUI>();    
+    private TextMeshProUGUI _text => GetComponentInChildren<TextMeshProUGUI>();
+    private TooltipTrigger _tooltip => GetComponent<TooltipTrigger>();
+
+    private void Start()
+    {
+        _tooltip.SetToolTipText("Level Up " + _idler.IdlerObject.name + " by One!",
+            "+ " + _idler.IdlerObject.BaseDamagePerLevel.ToString() + " Base DPS\n" +
+            "+ " + _idler.IdlerObject.BaseManaPerLevel.ToString() + " Base MPS");
+    }
 
     private void Update()
     {

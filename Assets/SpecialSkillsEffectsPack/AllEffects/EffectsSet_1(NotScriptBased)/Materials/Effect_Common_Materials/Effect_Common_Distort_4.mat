@@ -105,7 +105,7 @@ Material:
     - _Culling: 0
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
-    - _DistortFactor: 500
+    - _DistortFactor: 5000
     - _DistortionBlend: 0.5
     - _DistortionEnabled: 0
     - _DistortionStrength: 1
@@ -171,4 +171,5 @@ Material:
     - _NoiseValue: {r: 1, g: 1, b: 1, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
-    - _TintColor: {r: 3.5814202, g: 3.5814202, b: 3.5814202, a: 1}
+    - _TintColor: {r: 0.0047169924, g: 0.118675515, b: 1, a: 1}
+  m_BuildTextureStacks: []

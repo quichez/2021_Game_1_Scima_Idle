@@ -10,7 +10,7 @@ public class ClickerUnlock : IdlerUpgrade
     {
         GetComponent<Image>().sprite = Idler.IdlerObject.Icon;
         _tooltipTrigger.EnableToolTip(true);
-        _tooltipTrigger.SetToolTipText(playerClicker.ToString() + ":   " + UpgradeCost.ToString(), playerClicker.Description());
+        _tooltipTrigger.SetToolTipText(playerClicker.ToString() + ":   " + UpgradeCost.ToString(), playerClicker.Description());        
     }
 
     public override void UnlockUpgrade()

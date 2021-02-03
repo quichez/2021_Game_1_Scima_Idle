@@ -17,7 +17,7 @@ public class LootTable : MonoBehaviour
             new WeightedParam(() => _dropChance = 1, dropWeight));
         chanceToDrop.Execute();
 
-        Debug.Log(_dropChance);
+        //Debug.Log(_dropChance);
         if(_dropChance == 1)
         {
             int equipRoll = Random.Range(0, EquipmentDrops.Capacity);

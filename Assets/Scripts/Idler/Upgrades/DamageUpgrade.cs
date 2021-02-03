@@ -6,13 +6,9 @@ public class DamageUpgrade : IdlerUpgrade
 {
     public float damageIncrease;
 
-    private void Awake()
-    {
-        _image.sprite = Resources.Load<Sprite>("Sprites/damage_upgrade");
-    }
-
     private void Start()
     {
+        _image.sprite = Resources.Load<Sprite>("Sprites/damage_upgrade");
         _tooltipTrigger.EnableToolTip(true);
         _tooltipTrigger.SetToolTipText("Damage Upgrade:   " + UpgradeCost.ToString(), "Increases total damage by " + (damageIncrease - 1.0f).ToString("P"));
     }

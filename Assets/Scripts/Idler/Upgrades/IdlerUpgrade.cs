@@ -13,7 +13,7 @@ public abstract class IdlerUpgrade : MonoBehaviour
     public double CostExponent;
     public BigNumber UpgradeCost => new BigNumber(CostMantissa, CostExponent);
 
-    public Button _button => GetComponent<Button>();
+    protected Button _button => GetComponent<Button>();
     protected Idler Idler => transform.parent.parent.GetComponent<Idler>();
     public bool Unlocked { get; private set; } = false;
 
@@ -21,7 +21,7 @@ public abstract class IdlerUpgrade : MonoBehaviour
 
     private void Awake()
     {
-        _button.onClick.AddListener(UnlockUpgrade);
+        _button.onClick.AddListener(delegate { UnlockUpgrade(); });
     }
 
     private void Update()

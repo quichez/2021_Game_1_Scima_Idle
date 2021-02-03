@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class CostUpgrade : IdlerUpgrade
 {
-    public float costDecrease;
-
-    private void Awake()
-    {
-        _image.sprite = Resources.Load<Sprite>("Sprites/cost_upgrade");    
-    }
+    public float costDecrease; 
 
     private void Start()
     {
+        _image.sprite = Resources.Load<Sprite>("Sprites/cost_upgrade");
+
         _tooltipTrigger.EnableToolTip(true);
         _tooltipTrigger.SetToolTipText("Cost Upgrade:   " + UpgradeCost.ToString(), "Reduces total cost of leveling up by " + (costDecrease-1.0f).ToString("P"));
     }
