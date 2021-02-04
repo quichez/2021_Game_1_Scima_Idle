@@ -158,10 +158,10 @@ RectTransform:
   m_Father: {fileID: 122926893}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &11240472
 MonoBehaviour:
@@ -282,9 +282,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de46db254dfa09e40b91c74747f82e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  manaDecrease: 0
+  CostMantissa: 8.5
+  CostExponent: 8
+  manaDecrease: 1.3
 --- !u!1001 &18679324
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -638,10 +638,10 @@ RectTransform:
   m_Father: {fileID: 1196288676}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &183789635
 MonoBehaviour:
@@ -687,9 +687,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 183789638}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ManaUpgrade, Assembly-CSharp
-        m_MethodName: UnlockUpgrade
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -905,10 +905,10 @@ RectTransform:
   m_Father: {fileID: 978908451}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 35, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &194729468
 MonoBehaviour:
@@ -1029,9 +1029,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de46db254dfa09e40b91c74747f82e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  manaDecrease: 0
+  CostMantissa: 3
+  CostExponent: 5
+  manaDecrease: 1.2
 --- !u!1 &234670734
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,10 +1067,10 @@ RectTransform:
   m_Father: {fileID: 256017302}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &234670736
 MonoBehaviour:
@@ -1116,9 +1116,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 234670739}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DamageUpgrade, Assembly-CSharp
-        m_MethodName: UnlockUpgrade
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1331,10 +1331,10 @@ RectTransform:
   m_Father: {fileID: 256017302}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &243994160
 MonoBehaviour:
@@ -1380,9 +1380,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 243994163}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DamageUpgrade, Assembly-CSharp
-        m_MethodName: UnlockUpgrade
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1493,10 +1493,10 @@ RectTransform:
   m_Father: {fileID: 978908451}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &255704947
 MonoBehaviour:
@@ -1617,9 +1617,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ce6838adc80e842bb2b90eada7af4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  damageIncrease: 0
+  CostMantissa: 5
+  CostExponent: 5
+  damageIncrease: 1.15
 --- !u!224 &256017302 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6528696391028281468, guid: 1056bcb24e408b048bea7e32b20bfa58, type: 3}
@@ -1660,10 +1660,10 @@ RectTransform:
   m_Father: {fileID: 122926893}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &287568555
 MonoBehaviour:
@@ -1784,9 +1784,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5be96ee12b24014fa237c76ba0f2e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  costDecrease: 0
+  CostMantissa: 7.5
+  CostExponent: 7
+  costDecrease: 1.2
 --- !u!1 &291544888
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,10 +2335,10 @@ RectTransform:
   m_Father: {fileID: 495614824}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &361866763
 MonoBehaviour:
@@ -2459,9 +2459,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ce6838adc80e842bb2b90eada7af4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  damageIncrease: 0
+  CostMantissa: 2
+  CostExponent: 5
+  damageIncrease: 1.2
 --- !u!1 &371408443
 GameObject:
   m_ObjectHideFlags: 0
@@ -2497,10 +2497,10 @@ RectTransform:
   m_Father: {fileID: 1021726635}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &371408445
 MonoBehaviour:
@@ -2621,9 +2621,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ce6838adc80e842bb2b90eada7af4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  damageIncrease: 0
+  CostMantissa: 1
+  CostExponent: 5
+  damageIncrease: 1.25
 --- !u!1 &372483823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,10 +2659,10 @@ RectTransform:
   m_Father: {fileID: 392723616}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &372483825
 MonoBehaviour:
@@ -2721,7 +2721,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 372483823}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ClickerUnlock, Assembly-CSharp
         m_MethodName: 
         m_Mode: 1
@@ -2783,9 +2783,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ce6838adc80e842bb2b90eada7af4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  damageIncrease: 0
+  CostMantissa: 1
+  CostExponent: 3
+  damageIncrease: 1.2
 --- !u!1 &383479098
 GameObject:
   m_ObjectHideFlags: 0
@@ -3224,10 +3224,10 @@ RectTransform:
   m_Father: {fileID: 256017302}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &420358378
 MonoBehaviour:
@@ -3273,9 +3273,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 420358381}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CostUpgrade, Assembly-CSharp
-        m_MethodName: UnlockUpgrade
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3488,10 +3488,10 @@ RectTransform:
   m_Father: {fileID: 1196288676}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 35, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &453259079
 MonoBehaviour:
@@ -3537,9 +3537,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 453259082}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CostUpgrade, Assembly-CSharp
-        m_MethodName: UnlockUpgrade
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3809,10 +3809,10 @@ RectTransform:
   m_Father: {fileID: 1021726635}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &593133859
 MonoBehaviour:
@@ -3933,9 +3933,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ce6838adc80e842bb2b90eada7af4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  damageIncrease: 0
+  CostMantissa: 5
+  CostExponent: 3
+  damageIncrease: 1.2
 --- !u!1 &599416955
 GameObject:
   m_ObjectHideFlags: 0
@@ -4544,10 +4544,10 @@ RectTransform:
   m_Father: {fileID: 1196288676}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &708404435
 MonoBehaviour:
@@ -4593,9 +4593,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 708404438}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DamageUpgrade, Assembly-CSharp
-        m_MethodName: UnlockUpgrade
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4706,10 +4706,10 @@ RectTransform:
   m_Father: {fileID: 392723616}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &728642300
 MonoBehaviour:
@@ -4830,9 +4830,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ce6838adc80e842bb2b90eada7af4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  damageIncrease: 0
+  CostMantissa: 8
+  CostExponent: 4
+  damageIncrease: 1.2
 --- !u!1 &738389491
 GameObject:
   m_ObjectHideFlags: 0
@@ -5007,10 +5007,10 @@ RectTransform:
   m_Father: {fileID: 495614824}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &740888089
 MonoBehaviour:
@@ -5131,8 +5131,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f6a022ca588ab40a6c4d7de7a65422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
+  CostMantissa: 1
+  CostExponent: 6
   playerClicker: {fileID: 2075155710}
 --- !u!114 &743461464 stripped
 MonoBehaviour:
@@ -5180,10 +5180,10 @@ RectTransform:
   m_Father: {fileID: 256017302}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 35, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &764762153
 MonoBehaviour:
@@ -5229,9 +5229,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 764762156}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ManaUpgrade, Assembly-CSharp
-        m_MethodName: UnlockUpgrade
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5764,8 +5764,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 717e9ac784d5c56478781bc3c5044bc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  airEffect: {fileID: 598863631181069584, guid: 57999777365c95743b44d7187543b8bd, type: 3}
-  earthEffect: {fileID: 1610399588110667198, guid: 857f3186db3dd9e4c8d5b00df12d4f2d, type: 3}
+  effects:
+  - {fileID: 598863631181069584, guid: 57999777365c95743b44d7187543b8bd, type: 3}
+  - {fileID: 1610399588110667198, guid: 857f3186db3dd9e4c8d5b00df12d4f2d, type: 3}
+  - {fileID: 6292446424104384046, guid: 4be3eedf84df1154eb8ea8af951de628, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &837184191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6159,10 +6165,10 @@ RectTransform:
   m_Father: {fileID: 1021726635}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 35, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &879246305
 MonoBehaviour:
@@ -6283,9 +6289,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ce6838adc80e842bb2b90eada7af4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  damageIncrease: 0
+  CostMantissa: 5
+  CostExponent: 4
+  damageIncrease: 1.2
 --- !u!1001 &882725515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6562,8 +6568,8 @@ GameObject:
   - component: {fileID: 907559046}
   - component: {fileID: 907559045}
   - component: {fileID: 907559044}
-  - component: {fileID: 907559043}
   - component: {fileID: 907559047}
+  - component: {fileID: 907559043}
   m_Layer: 5
   m_Name: Button (6)
   m_TagString: Untagged
@@ -6585,10 +6591,10 @@ RectTransform:
   m_Father: {fileID: 1196288676}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &907559043
 MonoBehaviour:
@@ -6649,9 +6655,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 907559043}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: IdlerUpgrade, Assembly-CSharp
-        m_MethodName: UnlockUpgrade
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6747,10 +6753,10 @@ RectTransform:
   m_Father: {fileID: 122926893}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &907642171
 MonoBehaviour:
@@ -6871,9 +6877,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ce6838adc80e842bb2b90eada7af4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  damageIncrease: 0
+  CostMantissa: 6.5
+  CostExponent: 8
+  damageIncrease: 1.3
 --- !u!1 &909780686
 GameObject:
   m_ObjectHideFlags: 0
@@ -6909,10 +6915,10 @@ RectTransform:
   m_Father: {fileID: 1196288676}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &909780688
 MonoBehaviour:
@@ -6958,9 +6964,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 909780691}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DamageUpgrade, Assembly-CSharp
-        m_MethodName: UnlockUpgrade
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7218,10 +7224,10 @@ RectTransform:
   m_Father: {fileID: 122926893}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &941826553
 MonoBehaviour:
@@ -7342,9 +7348,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ce6838adc80e842bb2b90eada7af4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  damageIncrease: 0
+  CostMantissa: 2.200000047683716
+  CostExponent: 7
+  damageIncrease: 1.2
 --- !u!114 &951231956 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1012573963459888924, guid: 1056bcb24e408b048bea7e32b20bfa58, type: 3}
@@ -7720,10 +7726,10 @@ RectTransform:
   m_Father: {fileID: 392723616}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 35, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1031715472
 MonoBehaviour:
@@ -7844,9 +7850,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5be96ee12b24014fa237c76ba0f2e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  costDecrease: 0
+  CostMantissa: 1
+  CostExponent: 4
+  costDecrease: 1.2
 --- !u!1 &1039102545
 GameObject:
   m_ObjectHideFlags: 0
@@ -8050,10 +8056,10 @@ RectTransform:
   m_Father: {fileID: 392723616}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 35, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1056694689
 MonoBehaviour:
@@ -8080,9 +8086,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5be96ee12b24014fa237c76ba0f2e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  costDecrease: 0
+  CostMantissa: 5
+  CostExponent: 2
+  costDecrease: 1.2
 --- !u!114 &1056694691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8127,9 +8133,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1056694690}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CostUpgrade, Assembly-CSharp
-        m_MethodName: UnlockUpgrade
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8314,10 +8320,10 @@ RectTransform:
   m_Father: {fileID: 978908451}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1068653896
 MonoBehaviour:
@@ -8438,9 +8444,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ce6838adc80e842bb2b90eada7af4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  damageIncrease: 0
+  CostMantissa: 6.5
+  CostExponent: 6
+  damageIncrease: 1.2
 --- !u!1 &1081743481
 GameObject:
   m_ObjectHideFlags: 0
@@ -8476,10 +8482,10 @@ RectTransform:
   m_Father: {fileID: 1196288676}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 35, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1081743483
 MonoBehaviour:
@@ -8540,9 +8546,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1081743483}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ClickerUnlock, Assembly-CSharp
-        m_MethodName: UnlockUpgrade
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9016,10 +9022,10 @@ RectTransform:
   m_Father: {fileID: 256017302}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1118889277
 MonoBehaviour:
@@ -9065,9 +9071,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1118889280}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: DamageUpgrade, Assembly-CSharp
-        m_MethodName: UnlockUpgrade
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9333,10 +9339,10 @@ RectTransform:
   m_Father: {fileID: 256017302}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 35, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1127889872
 MonoBehaviour:
@@ -9382,9 +9388,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1127889875}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ClickerUnlock, Assembly-CSharp
-        m_MethodName: UnlockUpgrade
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9495,10 +9501,10 @@ RectTransform:
   m_Father: {fileID: 1021726635}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1156910046
 MonoBehaviour:
@@ -9619,8 +9625,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f6a022ca588ab40a6c4d7de7a65422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
+  CostMantissa: 3
+  CostExponent: 5
   playerClicker: {fileID: 2075155711}
 --- !u!1 &1161632524
 GameObject:
@@ -9657,10 +9663,10 @@ RectTransform:
   m_Father: {fileID: 1021726635}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 35, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1161632526
 MonoBehaviour:
@@ -9781,9 +9787,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5be96ee12b24014fa237c76ba0f2e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  costDecrease: 0
+  CostMantissa: 2
+  CostExponent: 3
+  costDecrease: 1.2
 --- !u!224 &1196288676 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6528696391028281468, guid: 1056bcb24e408b048bea7e32b20bfa58, type: 3}
@@ -10594,10 +10600,10 @@ RectTransform:
   m_Father: {fileID: 495614824}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1365087348
 MonoBehaviour:
@@ -10718,9 +10724,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ce6838adc80e842bb2b90eada7af4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  damageIncrease: 0
+  CostMantissa: 8
+  CostExponent: 4
+  damageIncrease: 1.2
 --- !u!1 &1405665852
 GameObject:
   m_ObjectHideFlags: 0
@@ -10756,10 +10762,10 @@ RectTransform:
   m_Father: {fileID: 978908451}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1405665854
 MonoBehaviour:
@@ -10880,9 +10886,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5be96ee12b24014fa237c76ba0f2e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  costDecrease: 0
+  CostMantissa: 1.2000000476837158
+  CostExponent: 6
+  costDecrease: 1.2
 --- !u!1 &1416471748
 GameObject:
   m_ObjectHideFlags: 0
@@ -10918,10 +10924,10 @@ RectTransform:
   m_Father: {fileID: 392723616}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1416471750
 MonoBehaviour:
@@ -11042,8 +11048,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f6a022ca588ab40a6c4d7de7a65422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
+  CostMantissa: 5
+  CostExponent: 3
   playerClicker: {fileID: 2075155712}
 --- !u!1001 &1422392583
 PrefabInstance:
@@ -11536,10 +11542,10 @@ RectTransform:
   m_Father: {fileID: 122926893}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 35, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1503726044
 MonoBehaviour:
@@ -11660,9 +11666,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de46db254dfa09e40b91c74747f82e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  manaDecrease: 0
+  CostMantissa: 6.5
+  CostExponent: 6
+  manaDecrease: 1.2
 --- !u!1 &1525147351
 GameObject:
   m_ObjectHideFlags: 0
@@ -11698,10 +11704,10 @@ RectTransform:
   m_Father: {fileID: 495614824}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 35, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1525147353
 MonoBehaviour:
@@ -11822,9 +11828,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ce6838adc80e842bb2b90eada7af4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  damageIncrease: 0
+  CostMantissa: 3
+  CostExponent: 4
+  damageIncrease: 1.25
 --- !u!1001 &1567361156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12068,10 +12074,10 @@ RectTransform:
   m_Father: {fileID: 495614824}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1582385386
 MonoBehaviour:
@@ -12192,9 +12198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de46db254dfa09e40b91c74747f82e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  manaDecrease: 0
+  CostMantissa: 5
+  CostExponent: 6
+  manaDecrease: 1.3
 --- !u!1 &1583314253
 GameObject:
   m_ObjectHideFlags: 0
@@ -12915,10 +12921,10 @@ RectTransform:
   m_Father: {fileID: 495614824}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 35, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1778301021
 MonoBehaviour:
@@ -13039,9 +13045,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5be96ee12b24014fa237c76ba0f2e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  costDecrease: 0
+  CostMantissa: 6
+  CostExponent: 5
+  costDecrease: 1.2
 --- !u!224 &1779883920 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8553226705754633896, guid: 1056bcb24e408b048bea7e32b20bfa58, type: 3}
@@ -13307,10 +13313,10 @@ RectTransform:
   m_Father: {fileID: 392723616}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 105, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1820512159
 MonoBehaviour:
@@ -13431,9 +13437,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de46db254dfa09e40b91c74747f82e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  manaDecrease: 0
+  CostMantissa: 5
+  CostExponent: 4
+  manaDecrease: 1.3
 --- !u!1 &1825552069
 GameObject:
   m_ObjectHideFlags: 0
@@ -13725,10 +13731,10 @@ RectTransform:
   m_Father: {fileID: 978908451}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1911769041
 MonoBehaviour:
@@ -13849,9 +13855,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de46db254dfa09e40b91c74747f82e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  manaDecrease: 0
+  CostMantissa: 1.100000023841858
+  CostExponent: 7
+  manaDecrease: 1.25
 --- !u!1 &1919761433
 GameObject:
   m_ObjectHideFlags: 0
@@ -13887,10 +13893,10 @@ RectTransform:
   m_Father: {fileID: 122926893}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 35, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1919761435
 MonoBehaviour:
@@ -14011,8 +14017,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f6a022ca588ab40a6c4d7de7a65422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
+  CostMantissa: 3
+  CostExponent: 8
   playerClicker: {fileID: 2075155708}
 --- !u!1 &1929939059
 GameObject:
@@ -14049,10 +14055,10 @@ RectTransform:
   m_Father: {fileID: 978908451}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 35, y: -105}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1929939061
 MonoBehaviour:
@@ -14173,8 +14179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f6a022ca588ab40a6c4d7de7a65422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
+  CostMantissa: 3.5
+  CostExponent: 6
   playerClicker: {fileID: 2075155709}
 --- !u!1 &1936446446
 GameObject:
@@ -14765,10 +14771,10 @@ RectTransform:
   m_Father: {fileID: 1021726635}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 175, y: -35}
+  m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1964163243
 MonoBehaviour:
@@ -14889,9 +14895,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ce6838adc80e842bb2b90eada7af4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CostMantissa: 0
-  CostExponent: 0
-  damageIncrease: 0
+  CostMantissa: 1
+  CostExponent: 4
+  damageIncrease: 1.2
 --- !u!1001 &2009815445
 PrefabInstance:
   m_ObjectHideFlags: 0
