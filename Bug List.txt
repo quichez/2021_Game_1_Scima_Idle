@@ -3,12 +3,16 @@ Game 1 Scima Idle Bug List
 - drops on kill don't update inv panel if not on item
 - IdlerUpgradeGroup - why can't i make the list of subclass work :/
 - does RoundBigNumber work? stay tuned ryan sucks
-
+- idlers don't display by default
+- idler cost upgrade doesn't update level up button
+- make joe die
+- make mana stop at zero
 
 Features that I never quite figured out
 - How to use T : F<T> for items
 - how to make weighted roll even more (less) retarded
 - optimize updates to DPS/DPF
 - consider a framework for backing BigNumber<int> implementation? or leave Rounded as is.
-- how to subscribe a method to the OnClick callback in script
+- make level up tooltip show total increase
+
 
