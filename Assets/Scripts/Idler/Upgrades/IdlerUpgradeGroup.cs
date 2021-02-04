@@ -12,9 +12,11 @@ public class IdlerUpgradeGroup : MonoBehaviour
         _upgradesUnlocked = GetComponentInParent<Idler>().IdlerObject.UpgradesUnlocked;
         OnLoad();
     }
+
     public List<float> GetIdlerDamageUpgrades()
     {
-        List<float> values = new List<float>();
+        _upgradesUnlocked = GetComponentInParent<Idler>().IdlerObject.UpgradesUnlocked;
+        List<float> values = new List<float>();        
         foreach (IdlerUpgrade item in Upgrades)
         {
             if(_upgradesUnlocked[item.transform.GetSiblingIndex()] && item.GetType() == typeof(DamageUpgrade))

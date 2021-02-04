@@ -8,7 +8,7 @@ public class TabButtonGroup : MonoBehaviour
     public TabButton buttonPrefab;
     private GameObject[] _panels => GameObject.FindGameObjectsWithTag("Panel");
     private TabButton[] _tabs;
-
+    public GameObject idlers;
 
     void Start()
     {
@@ -23,6 +23,7 @@ public class TabButtonGroup : MonoBehaviour
             else
                 panel.gameObject.SetActive(false);
         }
+        idlers.SetActive(true);
     }
 
     public void SetActivePanel(TabButton tab)
