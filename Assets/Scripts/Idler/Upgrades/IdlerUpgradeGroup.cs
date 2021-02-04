@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class IdlerUpgradeGroup : MonoBehaviour
 {
-    private bool[] _upgradesUnlocked;// => GetComponentInParent<Idler>().IdlerObject.UpgradesUnlocked;
     public IdlerUpgrade[] Upgrades => GetComponentsInChildren<IdlerUpgrade>();
+    private bool[] _upgradesUnlocked => GetComponentInParent<Idler>().IdlerObject.UpgradesUnlocked;
 
     private void Start()
     {
-        _upgradesUnlocked = GetComponentInParent<Idler>().IdlerObject.UpgradesUnlocked;
         OnLoad();
     }
 
     public List<float> GetIdlerDamageUpgrades()
     {
-        _upgradesUnlocked = GetComponentInParent<Idler>().IdlerObject.UpgradesUnlocked;
         List<float> values = new List<float>();        
         foreach (IdlerUpgrade item in Upgrades)
         {
