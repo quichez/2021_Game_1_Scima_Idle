@@ -41,4 +41,9 @@ public class ItemDatabase : MonoBehaviour
     {
         return EquipmentDatabase.Find(obj => obj.ID == id);
     }
+
+    public static Equipment GetRandomEquipment()
+    {
+        return EquipmentDatabase[UnityEngine.Random.Range(0, EquipmentDatabase.Count)];
+    }
 }

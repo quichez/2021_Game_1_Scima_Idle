@@ -162,10 +162,13 @@ public class Idler : MonoBehaviour
 
     public void UpdateTextFields()
     {
-        IdlerName.text = IdlerObject.name;
-        LevelText.text = "Level " + IdlerObject.Level.ToString();
-        DamageText.text = Damage.ToString() + " DPS";
-        ManaText.text = Mana.ToString() + " MPS";
+        if(IdlerName != null && LevelText != null && DamageText != null && ManaText != null)
+        {
+            IdlerName.text = IdlerObject.name;
+            LevelText.text = "Level " + IdlerObject.Level.ToString();
+            DamageText.text = Damage.ToString() + " DPS";
+            ManaText.text = Mana.ToString() + " MPS";
+        }
     }
 
 
@@ -176,5 +179,10 @@ public class Idler : MonoBehaviour
         ModifyTotalCost();
         UpdateTextFields();
         _button.UpdateButtonText();
+    }
+
+    private void OnEnable()
+    {
+        ModifyTotalDamage();
     }
 }

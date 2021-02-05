@@ -153,6 +153,45 @@
         }
     },
     {
+    "id": 600,
+    "title": "Scroll of Truth",
+    "desc": "No one cares what you post on your Facebook page.",
+    "slug": "Scroll_Close_Yellow",
+    "equip_type": "accesory",
+    "stats":
+        {
+        "damage":{"min": 1.05,"max": 1.20},
+        "mana":  {"min": 1.05,"max": 1.35},
+        "cost":  {"min": 1.10,"max": 1.35}
+        }
+    },
+    {
+    "id": 601,
+    "title": "Scroll of Lies",
+    "desc": "You are loved.",
+    "slug": "Scroll_Close_Red",
+    "equip_type": "accesory",
+    "stats":
+        {
+        "damage":{"min": 1.05,"max": 1.20},
+        "mana":  {"min": 1.05,"max": 1.35},
+        "cost":  {"min": 1.10,"max": 1.35}
+        }
+    },
+    {
+    "id": 602,
+    "title": "Blue Rock",
+    "desc": "Not quite a flux crystal.",
+    "slug": "Rune_F",
+    "equip_type": "accesory",
+    "stats":
+        {
+        "damage":{"min": 1.05,"max": 1.20},
+        "mana":  {"min": 1.05,"max": 1.35},
+        "cost":  {"min": 1.10,"max": 1.35}
+        }
+    },
+    {
     "id": 666,
     "title": "Jetpack Pengin",
     "desc": "This is so awesome.",

@@ -14,5 +14,5 @@ Features that I never quite figured out
 - optimize updates to DPS/DPF
 - consider a framework for backing BigNumber<int> implementation? or leave Rounded as is.
 - make level up tooltip show total increase
-
+- change effect spawner to instantiate a reference, method called from the PlayerClicker.
 

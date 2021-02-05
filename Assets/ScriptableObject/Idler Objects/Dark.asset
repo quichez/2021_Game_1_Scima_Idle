@@ -18,7 +18,7 @@ MonoBehaviour:
   DamageExponent: 4
   CostMantissa: 1.5
   CostExponent: 5
-  ManaMantissa: 8
+  ManaMantissa: 2.2
   ManaExponent: 4
   CostScale: 1.07
   UpgradesUnlocked: 000000000000

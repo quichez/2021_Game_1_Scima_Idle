@@ -5,7 +5,7 @@ using UnityEngine;
 public class IdlerUpgradeGroup : MonoBehaviour
 {
     public IdlerUpgrade[] Upgrades => GetComponentsInChildren<IdlerUpgrade>();
-    private bool[] _upgradesUnlocked => GetComponentInParent<Idler>().IdlerObject.UpgradesUnlocked;
+    private bool[] _upgradesUnlocked => GetComponentInParent<Idler>()?.IdlerObject.UpgradesUnlocked;
 
     private void Start()
     {
@@ -17,8 +17,12 @@ public class IdlerUpgradeGroup : MonoBehaviour
         List<float> values = new List<float>();        
         foreach (IdlerUpgrade item in Upgrades)
         {
-            if(_upgradesUnlocked[item.transform.GetSiblingIndex()] && item.GetType() == typeof(DamageUpgrade))
-                values.Add(((DamageUpgrade)item).damageIncrease);
+            if(_upgradesUnlocked != null)
+            {
+                if(_upgradesUnlocked[item.transform.GetSiblingIndex()] && item.GetType() == typeof(DamageUpgrade))
+                    values.Add(((DamageUpgrade)item).damageIncrease);
+
+            }
         }
         return values;
     } 
@@ -28,8 +32,11 @@ public class IdlerUpgradeGroup : MonoBehaviour
         List<float> values = new List<float>();
         foreach (IdlerUpgrade item in Upgrades)
         {
-            if (_upgradesUnlocked[item.transform.GetSiblingIndex()] && item.GetType() == typeof(ManaUpgrade))
-                values.Add(1.0f/ ((ManaUpgrade)item).manaDecrease);
+            if (_upgradesUnlocked != null)
+            {
+                if (_upgradesUnlocked[item.transform.GetSiblingIndex()] && item.GetType() == typeof(ManaUpgrade))
+                    values.Add(1.0f/ ((ManaUpgrade)item).manaDecrease);
+            }
         }
         return values;
     }
@@ -39,8 +46,11 @@ public class IdlerUpgradeGroup : MonoBehaviour
         List<float> values = new List<float>();
         foreach (IdlerUpgrade item in Upgrades)
         {
-            if (_upgradesUnlocked[item.transform.GetSiblingIndex()] && item.GetType() == typeof(CostUpgrade))
-                values.Add(1.0f / ((CostUpgrade) item).costDecrease);
+            if (_upgradesUnlocked != null)
+            {
+                if (_upgradesUnlocked[item.transform.GetSiblingIndex()] && item.GetType() == typeof(CostUpgrade))
+                    values.Add(1.0f / ((CostUpgrade) item).costDecrease);
+            }
         }
         return values;
     }

@@ -14,7 +14,7 @@ public class IdlerObject : ScriptableObject
     [Range(0.0f,9.999f)] public float DamageMantissa;
     public float DamageExponent;
     public BigNumber BaseDamage => GetModifiedBaseDamage() * Level;
-    public BigNumber BaseDamagePerLevel { get { return GetModifiedBaseCost(); } }
+    public BigNumber BaseDamagePerLevel { get { return GetModifiedBaseDamage(); } }
 
     [Header("Base Cost")]
     [Range(0.0f, 9.999f)] public float CostMantissa;

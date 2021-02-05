@@ -23,7 +23,7 @@ public class LootTable : MonoBehaviour
             int equipRoll = Random.Range(0, EquipmentDrops.Capacity);
             IdlerName idler = (IdlerName)Random.Range(0, 7);
 
-            Equipment drop = new Equipment(ItemDatabase.GetEquipmentByID(EquipmentDrops[equipRoll]));
+            Equipment drop = new Equipment(ItemDatabase.GetRandomEquipment());
 
             WeightedRoll gradeRoll = new WeightedRoll(
                 new WeightedParam(() => drop.SelectGrade(GradeType.Common), GradeWeights[0]),
