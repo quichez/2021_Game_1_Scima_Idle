@@ -7,12 +7,18 @@ public class StartGame : MonoBehaviour
 {
     public void StartTheGame()
     {
+        Debug.Log(Application.persistentDataPath);
         SaveManager.LoadGame();
         SceneManager.LoadScene("Game");
     }
     
     public void SaveTheGame()
     {
-        SaveManager.SaveGame();
+        SaveManager.SaveGame();        
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

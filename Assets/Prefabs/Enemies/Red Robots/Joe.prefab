@@ -98,11 +98,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 560466550026269512, guid: 216536206344f9040b9a4e1469736735, type: 3}
       propertyPath: EnemyGold
-      value: 1000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 560466550026269512, guid: 216536206344f9040b9a4e1469736735, type: 3}
       propertyPath: EnemyMana
-      value: 200000
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 560466550026269512, guid: 216536206344f9040b9a4e1469736735, type: 3}
       propertyPath: GoldOnKill
@@ -111,6 +111,10 @@ PrefabInstance:
     - target: {fileID: 560466550026269512, guid: 216536206344f9040b9a4e1469736735, type: 3}
       propertyPath: ManaOnKill
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 560466550026269512, guid: 216536206344f9040b9a4e1469736735, type: 3}
+      propertyPath: EnemyHealth
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3836439393728230944, guid: 216536206344f9040b9a4e1469736735, type: 3}
       propertyPath: m_LocalRotation.w

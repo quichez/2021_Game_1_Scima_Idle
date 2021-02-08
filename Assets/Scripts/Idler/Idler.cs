@@ -85,19 +85,24 @@ public class Idler : MonoBehaviour
 
         //Add IdlerDamageUpgades to TotalDamageModifiers
         TotalDamageModifiers.AddRange(IdlerUpgrades?.GetIdlerDamageUpgrades());
+        List<Equipment> playerEquipped = Player.Instance?.Inventory?.EquippedItems;
 
-        foreach (Equipment equipment in Player.Instance.Inventory.EquippedItems)
+        //Wrapped in null check for OnEnable
+        if(playerEquipped != null)
         {
-            if(equipment.ID != -1)
+            foreach (Equipment equipment in Player.Instance.Inventory.EquippedItems)
             {
-                foreach (EquipmentStat stat in equipment.Stats)
+                if(equipment.ID != -1)
                 {
+                    foreach (EquipmentStat stat in equipment.Stats)
+                    {
                     
-                   if (stat.Idler == (IdlerName)System.Enum.Parse(typeof(IdlerName), IdlerObject.name))
-                   {
-                        if (stat.Stat == IdlerStat.Damage)
-                            TotalDamageModifiers.Add(stat.Amount);
-                   }
+                       if (stat.Idler == (IdlerName)System.Enum.Parse(typeof(IdlerName), IdlerObject.name))
+                       {
+                            if (stat.Stat == IdlerStat.Damage)
+                                TotalDamageModifiers.Add(stat.Amount);
+                       }
+                    }
                 }
             }
         }
