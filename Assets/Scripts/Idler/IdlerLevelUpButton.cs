@@ -8,7 +8,7 @@ public class IdlerLevelUpButton : MonoBehaviour
 {
     private Idler _idler => transform.GetComponentInParent<Idler>();
     private Button _button => GetComponent<Button>();
-    private TextMeshProUGUI _text => GetComponentInChildren<TextMeshProUGUI>();
+    [SerializeField] private TextMeshProUGUI _text;
     private TooltipTrigger _tooltip => GetComponent<TooltipTrigger>();
 
     private void Start()
@@ -16,6 +16,8 @@ public class IdlerLevelUpButton : MonoBehaviour
         _tooltip.SetToolTipText("Level Up " + _idler.IdlerObject.name + " by One!",
             "+ " + _idler.IdlerObject.BaseDamagePerLevel.ToString() + " Base DPS\n" +
             "+ " + _idler.IdlerObject.BaseManaPerLevel.ToString() + " Base MPS");
+        Player.Instance.OnInventoryUpdateCallback += UpdateButtonText;
+
     }
 
     private void Update()
@@ -28,7 +30,8 @@ public class IdlerLevelUpButton : MonoBehaviour
 
     public void UpdateButtonText()
     {
-        _text.text = _idler.Cost.Rounded.ToString() + "\n Level Up";
+        Debug.Log(_text);        
+        _text.text = _idler?.Cost?.Rounded.ToString() + "\n Level Up";
     }
 
     public void LevelUp()

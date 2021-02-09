@@ -1,8 +1,10 @@
 using UnityEngine;
+using TMPro;
 
 public class TabButton : MonoBehaviour
 {
     private TabButtonGroup _group;
+    private TextMeshProUGUI _text => GetComponentInChildren<TextMeshProUGUI>();
     public GameObject Panel { get; private set; }
    
 
@@ -10,6 +12,7 @@ public class TabButton : MonoBehaviour
     {
         _group = group;
         Panel = panel;
+        _text.text = panel.name;
     }
 
     public void SetPanelActive()

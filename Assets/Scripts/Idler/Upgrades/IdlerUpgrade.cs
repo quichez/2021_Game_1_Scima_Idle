@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum IdlerUpgradeType { Cost,Damage,Mana,Clicker}
+
 [RequireComponent(typeof(TooltipTrigger))]
 public abstract class IdlerUpgrade : MonoBehaviour
 {
@@ -33,6 +35,7 @@ public abstract class IdlerUpgrade : MonoBehaviour
     {
         Unlocked = true;
         Idler.IdlerObject.UpgradesUnlocked[transform.GetSiblingIndex()] = true;
+        _image.color = Color.blue + Color.gray;
         Player.Instance?.ChangeGold(-UpgradeCost);
     }
 

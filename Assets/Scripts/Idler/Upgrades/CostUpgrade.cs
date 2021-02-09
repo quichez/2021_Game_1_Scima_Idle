@@ -18,5 +18,6 @@ public class CostUpgrade : IdlerUpgrade
     {
         base.UnlockUpgrade();
         Idler.ModifyTotalCost();
+        Idler.UpdateLevelUpButton();
     }
 }

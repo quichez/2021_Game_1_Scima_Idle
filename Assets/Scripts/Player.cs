@@ -46,7 +46,6 @@ public class Player : MonoBehaviour
                 Gold = new BigNumber(playerCache.GoldMant, playerCache.GoldExp).Rounded;                            
             if (!double.IsNaN(playerCache.ManaMant) && !double.IsNaN(playerCache.ManaExp))
                 Mana = new BigNumber(playerCache.ManaMant, playerCache.ManaExp).Rounded;
-            Debug.Log(playerCache.InventoryData.Length);
             Inventory.Items.Clear();
             Inventory.EquippedItems.Clear();
             foreach (EquipmentData item in playerCache.InventoryData)
@@ -175,13 +174,13 @@ public class Player : MonoBehaviour
 
     public void ChangeGold(BigNumber amount)
     {
-        Gold += amount.Rounded;
+        Gold = BigNumber.Max(BigNumber.Zero, Gold + amount);
         OnGoldUpdateCallback?.Invoke();
     }
 
     public void ChangeMana(BigNumber amount)
     {
-        Mana += amount.Rounded;
+        Mana = BigNumber.Max(BigNumber.Zero, Mana + amount);        
         OnManaUpdateCallback?.Invoke();
     }
 

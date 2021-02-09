@@ -55,7 +55,7 @@ public class Idler : MonoBehaviour
         Icon.sprite = IdlerObject.Icon;
         Player.Instance.OnInventoryUpdateCallback += ModifyTotalDamage;
         Player.Instance.OnGoldUpdateCallback += ModifyTotalCost;
-        Player.Instance.OnInventoryUpdateCallback += UpdateTextFields;        
+        Player.Instance.OnInventoryUpdateCallback += UpdateTextFields;                
 
         //Load The Game
         if(SaveManager.Instance?.Cache!=null)
@@ -176,6 +176,7 @@ public class Idler : MonoBehaviour
         }
     }
 
+    public void UpdateLevelUpButton() => _button.UpdateButtonText();
 
     public void ResetIdlerObject()
     {
