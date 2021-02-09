@@ -94,11 +94,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 560466550026269512, guid: 216536206344f9040b9a4e1469736735, type: 3}
       propertyPath: EnemyGold
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 560466550026269512, guid: 216536206344f9040b9a4e1469736735, type: 3}
       propertyPath: EnemyMana
-      value: 10
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 560466550026269512, guid: 216536206344f9040b9a4e1469736735, type: 3}
       propertyPath: GoldOnKill
