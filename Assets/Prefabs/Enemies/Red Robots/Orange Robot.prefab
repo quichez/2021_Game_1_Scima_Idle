@@ -126,7 +126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5272924409027540394, guid: 216536206344f9040b9a4e1469736735, type: 3}
       propertyPath: dropWeight
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5272924409027540394, guid: 216536206344f9040b9a4e1469736735, type: 3}
       propertyPath: EquipmentDrops.Array.size

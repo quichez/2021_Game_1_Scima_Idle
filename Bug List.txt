@@ -1,12 +1,11 @@
 Game 1 Scima Idle Bug List
 - equip/unequip of item does not change current display value of cost
-- drops on kill don't update inv panel if not on item
 - IdlerUpgradeGroup - why can't i make the list of subclass work :/
 - does RoundBigNumber work? stay tuned ryan sucks
-- idlers don't display by default
 - idler cost upgrade doesn't update level up button
-- make joe die
 - make mana stop at zero
+- anchors are not set up completely
+- tooltip goes off screen
 
 Features that I never quite figured out
 - How to use T : F<T> for items
@@ -15,4 +14,7 @@ Features that I never quite figured out
 - consider a framework for backing BigNumber<int> implementation? or leave Rounded as is.
 - make level up tooltip show total increase
 - change effect spawner to instantiate a reference, method called from the PlayerClicker.
-
+- make level up button have group level ups
+- better labels
+- delete all rarity type button
+- mana regen over time ???

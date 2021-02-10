@@ -9,8 +9,8 @@ public class Player : MonoBehaviour
     public int InventorySpace = 24;
     public int EquipmentSpace = 6;
 
-    public BigNumber Gold { get; private set; } = BigNumber.Zero;
-    public BigNumber Mana { get; private set; } = BigNumber.Zero;
+    public BigNumber Gold { get; private set; } = new BigNumber(100000);
+    public BigNumber Mana { get; private set; } = new BigNumber(100000);
 
     public Inventory Inventory { get; private set; }
 
@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
 
     public delegate void OnPlayerUpdate();
     public OnPlayerUpdate OnInventoryUpdateCallback;
+    public OnPlayerUpdate OnEquipCallback;
     public OnPlayerUpdate OnGoldUpdateCallback;
     public OnPlayerUpdate OnManaUpdateCallback;
 
@@ -66,6 +67,8 @@ public class Player : MonoBehaviour
                 Inventory.EquippedItems.Add(item.LoadEquipment());
             }
         }
+        OnInventoryUpdateCallback?.Invoke();
+        OnEquipCallback?.Invoke();
         OnGoldUpdateCallback?.Invoke();
         OnManaUpdateCallback?.Invoke();
     }
@@ -139,6 +142,7 @@ public class Player : MonoBehaviour
             Inventory.EquippedItems[two] = (Equipment)temp;
 
             OnInventoryUpdateCallback?.Invoke();
+            OnEquipCallback?.Invoke();
         }
     }
 
@@ -156,6 +160,7 @@ public class Player : MonoBehaviour
             Inventory.Items[two] = temp;
         }
         OnInventoryUpdateCallback?.Invoke();
+        OnEquipCallback?.Invoke();
     }
 
     public void RemoveItem(InventorySlot removal)
@@ -169,7 +174,7 @@ public class Player : MonoBehaviour
     {
         int i = Inventory.EquippedItems.FindIndex(x => x == removal.Item);
         Inventory.EquippedItems[i] = new Equipment();
-        OnInventoryUpdateCallback?.Invoke();
+        OnEquipCallback?.Invoke();
     }
 
     public void ChangeGold(BigNumber amount)
