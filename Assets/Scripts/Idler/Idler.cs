@@ -1,8 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
 
-public class Idler2
+public enum IdlerName
+{
+    [EnumMember(Value = "Air")] Air,
+    [EnumMember(Value = "Earth")] Earth,
+    [EnumMember(Value = "Water")] Water,
+    [EnumMember(Value = "Fire")] Fire,
+    [EnumMember(Value = "Lightning")] Lightning,
+    [EnumMember(Value = "Light")] Light,
+    [EnumMember(Value = "Dark")] Dark
+}
+
+public enum IdlerStat
+{
+    [EnumMember(Value = "damage")] Damage,
+    [EnumMember(Value = "mana")] Mana,
+    [EnumMember(Value = "cost")] Cost
+}
+
+public class Idler
 {
     private PlayerIdlers _playerIdler;
 
@@ -10,7 +29,7 @@ public class Idler2
     public BigNumber Mana { get; private set; }
     public BigNumber Cost { get; private set; }
 
-    public IdlerObject2 IdlerObject { get; }
+    public IdlerObject IdlerObject { get; }
 
     public delegate void OnIdlerUpdate();
     public OnIdlerUpdate OnLevelUpCallback;
@@ -20,15 +39,16 @@ public class Idler2
     private List<float> _manaModifiers = new List<float>(20);
     private List<float> _costModifiers = new List<float>(20);
 
-    public Idler2(IdlerObject2 idob, PlayerIdlers master)
+    public Idler(IdlerObject idob, PlayerIdlers master)
     {
         _playerIdler = master;
         IdlerObject = idob;
         UpdateIdler();
         OnLevelUpCallback += UpdateIdler;
         OnLevelUpCallback += _playerIdler.UpdateTotalIdlerDamage;
+        OnLevelUpCallback += _playerIdler.UpdateTotalIdlerManaCost;
 
-        Player.Instance.OnEquipCallback += UpdateIdler;
+        Player.Instance.OnEquipCallback += UpdateIdler;        
     }
 
     public void LevelUp(int amount=1)
@@ -71,5 +91,15 @@ public class Idler2
     public BigNumber ModifiedTotalCost()
     {
         return BigNumber.Zero;
+    }
+
+
+    /// <summary>
+    /// Load data for this class
+    /// </summary>
+    public void LoadData(int level = 0)
+    {
+        IdlerObject.Level = level;
+        OnLevelUpCallback?.Invoke();
     }
 }

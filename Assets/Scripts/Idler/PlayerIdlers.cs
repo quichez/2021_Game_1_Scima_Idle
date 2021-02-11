@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class PlayerIdlers : MonoBehaviour
 {
-    public IdlerObject2[] IdlerObjects;
-    public List<Idler2> IdlerList { get; private set; }
-    public Idler2[] Idlers { get; private set; } 
+    public IdlerObject[] IdlerObjects;
+    public List<Idler> IdlerList { get; private set; }
 
     public BigNumber TotalIdlerDamage { get; private set; }
-    public BigNumber TotalManaCost;
+    public BigNumber TotalManaCost { get; private set; }
+
+    public BigNumber DamagePerFrame => TotalIdlerDamage * Time.deltaTime;
+    public BigNumber ManaPerFrame => TotalManaCost * Time.deltaTime;
 
     private List<float> _damageModifiers = new List<float>(20);
     private List<float> _manaModifiers = new List<float>(20);
@@ -23,45 +25,27 @@ public class PlayerIdlers : MonoBehaviour
     private void Awake()
     {
         //Create Idler2 for every IdOb2
-        Idlers = new Idler2[IdlerObjects.Length];
-        IdlerList = new List<Idler2>(IdlerObjects.Length);
+        IdlerList = new List<Idler>(IdlerObjects.Length);
         for (int i = 0; i < IdlerObjects.Length; i++)
         {
             //Set Idler2 values to IdOb2 values
-            Idlers[i] = new Idler2(IdlerObjects[i],this);
-            IdlerList.Add(new Idler2(IdlerObjects[i],this));
+            IdlerList.Add(new Idler(IdlerObjects[i],this));
+            IdlerList[i].LoadData(SaveManager.Instance.Cache.IdlerLevels[i]);
         }
     }
 
     void Start()
     {
         UpdateTotalIdlerDamage();
+        UpdateTotalIdlerManaCost();
         Player.Instance.OnEquipCallback += UpdateTotalIdlerDamage;
-    }    
-
-    public void GetEquipmentModifiers()
-    {
-        _damageModifiers.Clear();
-        _manaModifiers.Clear();
-        _costModifiers.Clear();        
-        foreach (Equipment equip in Player.Instance.Inventory.EquippedItems)
-        {
-            if(equip.ID != -1)
-            {
-                foreach (EquipmentStat stat in equip.Stats)
-                {
-                    //Idler2 idler = IdlerList.Find(x => x.IdlerObject.IdlerName == stat.Idler);                    
-                }
-            }
-        }
-        OnPlayerDamageUpdateCallback?.Invoke();
-        OnPlayerManaUpdateCallback?.Invoke();        
-    }
+        Player.Instance.OnEquipCallback += UpdateTotalIdlerManaCost;
+    } 
 
     public void UpdateTotalIdlerDamage()
     {        
         BigNumber temp = BigNumber.Zero;
-        foreach (Idler2 idler in Idlers)
+        foreach (Idler idler in IdlerList)
         {
             temp += idler.Damage;
         }
@@ -72,11 +56,12 @@ public class PlayerIdlers : MonoBehaviour
     public void UpdateTotalIdlerManaCost()
     {
         BigNumber temp = BigNumber.Zero;
-        foreach (Idler2 idler in Idlers)
+        foreach (Idler idler in IdlerList)
         { 
             temp += idler.Mana;
         }
         TotalManaCost = temp;
+        OnPlayerManaUpdateCallback?.Invoke();
     }
 
 

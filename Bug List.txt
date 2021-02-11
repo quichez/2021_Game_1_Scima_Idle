@@ -1,8 +1,7 @@
 Game 1 Scima Idle Bug List
 - equip/unequip of item does not change current display value of cost
 - IdlerUpgradeGroup - why can't i make the list of subclass work :/
-- does RoundBigNumber work? stay tuned ryan sucks
-- idler cost upgrade doesn't update level up button
+- does RoundBigNumber work? stay tuned ryan is cool
 - make mana stop at zero
 - anchors are not set up completely
 - tooltip goes off screen

@@ -8,7 +8,6 @@ public abstract class PlayerClicker : MonoBehaviour
     [Range(0.000f, 9.999f)] public float DamageMantissa;
     public float DamageExponent;
     public BigNumber BaseDamage => new BigNumber(DamageMantissa, DamageExponent);
-    [SerializeField] protected Idler _idler;
 
     public bool Unlocked { get; protected set; }    
 

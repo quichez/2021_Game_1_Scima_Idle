@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class IdlerLevelUpButton2 : MonoBehaviour
+public class IdlerLevelUpButton : MonoBehaviour
 {
-    private Idler2 _idler;
+    private Idler _idler;
     private Button _button =>           GetComponent<Button>();
-    public TextMeshProUGUI _text;// =>    GetComponent<TextMeshProUGUI>();
+    public TextMeshProUGUI _text;
     private TooltipTrigger _tooltip =>  GetComponent<TooltipTrigger>();
 
     private void Update()
@@ -16,7 +16,7 @@ public class IdlerLevelUpButton2 : MonoBehaviour
         _button.interactable = Player.Instance.Gold - _idler.Cost >= BigNumber.Zero;
     }
 
-    public void Subscribe(Idler2 idler)
+    public void Subscribe(Idler idler)
     {
         //Cache reference to subscribed idler
         _idler = idler;
@@ -32,8 +32,8 @@ public class IdlerLevelUpButton2 : MonoBehaviour
         _text.text = _idler?.Cost?.Rounded.ToString() + "\n Level Up";
     }
     
-    public void LevelUpIdler(int amount)
+    public void LevelUpIdler(int amount=1)
     {
-        _idler.LevelUp();
+        _idler.LevelUp(amount);
     }
 }

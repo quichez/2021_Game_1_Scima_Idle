@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class ClickerUnlock2 : IdlerUpgrade2
+public class ClickerUnlock : IdlerUpgrade
 {
     public PlayerClicker playerClicker;
-    //private Idler2 _idler;
 
     private void Start()
     {        
@@ -14,7 +13,7 @@ public class ClickerUnlock2 : IdlerUpgrade2
         _tooltipTrigger.SetToolTipText(playerClicker.ToString() + ":   " + UpgradeCost.ToString(), playerClicker.Description());
     }
 
-    public void SetIdler(Idler2 idler)
+    public void SetIdler(Idler idler)
     {
         _idler = idler;
         _image.sprite = _idler.IdlerObject.Icon;

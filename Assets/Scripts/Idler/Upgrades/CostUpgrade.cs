@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CostUpgrade2 : IdlerUpgrade2
+public class CostUpgrade : IdlerUpgrade
 {
     private void Start()
     {

@@ -5251,7 +5251,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &1473729973
 MonoBehaviour:
@@ -7671,7 +7671,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InventorySpace: 24
   EquipmentSpace: 6
-  IdlerList: {fileID: 618095596}
 --- !u!4 &2075155705
 Transform:
   m_ObjectHideFlags: 0
@@ -8605,5 +8604,5 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_TargetDisplay: 0

@@ -15,7 +15,7 @@ public class LightningClicker : PlayerClicker, IPlayerClick
         {
             float roll = Random.value;
             if (roll < 0.1f)
-                Stage.Instance.CurrentEnemy.TakeDamage(BaseDamage + 10 * _idler.IdlerObject.Level / 15);
+                return; //Stage.Instance.CurrentEnemy.TakeDamage(BaseDamage + 10 * _idler.IdlerObject.Level / 15);
         }
     }
 

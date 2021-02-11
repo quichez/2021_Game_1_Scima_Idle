@@ -13,14 +13,8 @@ public class Player : MonoBehaviour
     public BigNumber Mana { get; private set; } = new BigNumber(100000);
 
     public Inventory Inventory { get; private set; }
-
-    public GameObject IdlerList;
-    public Idler[] Idlers => IdlerList.GetComponentsInChildren<Idler>();
+    
     public IPlayerClick[] PlayerClickers => GetComponents<IPlayerClick>();
-
-    public BigNumber Damage => TotalIdlerDamage() * Time.deltaTime;
-    public BigNumber ManaCost => TotalIdlerManaCost() * Time.deltaTime;
-
 
     public delegate void OnPlayerUpdate();
     public OnPlayerUpdate OnInventoryUpdateCallback;
@@ -28,13 +22,16 @@ public class Player : MonoBehaviour
     public OnPlayerUpdate OnGoldUpdateCallback;
     public OnPlayerUpdate OnManaUpdateCallback;
 
+    public PlayerIdlers PlayerIdlers { get; private set; }
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
             Destroy(gameObject);
         else
             Instance = this;
-        Inventory = new Inventory(InventorySpace, EquipmentSpace);       
+        Inventory = new Inventory(InventorySpace, EquipmentSpace);
+        PlayerIdlers = GetComponent<PlayerIdlers>();
     }
 
     private void Start()
@@ -75,33 +72,13 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (Mana > BigNumber.Zero && !Stage.Instance.CurrentEnemy.IsDying)
+        if ((Mana - PlayerIdlers.ManaPerFrame) >= BigNumber.Zero && !Stage.Instance.CurrentEnemy.IsDying)
         {
-            Mana = BigNumber.Max(BigNumber.Zero, Mana - ManaCost);
-            Stage.Instance.CurrentEnemy?.TakeDamage(Damage);
+            Mana = BigNumber.Max(BigNumber.Zero, Mana - PlayerIdlers.ManaPerFrame);
+            Stage.Instance.CurrentEnemy?.TakeDamage(PlayerIdlers.DamagePerFrame);
         }        
         OnManaUpdateCallback?.Invoke();
-    }
-
-    public BigNumber TotalIdlerDamage()
-    {
-        BigNumber dmg = new BigNumber();
-        foreach (Idler idler in Idlers)
-        {
-            dmg += idler.Damage;
-        }        
-        return dmg;
-    }
-
-    public BigNumber TotalIdlerManaCost()
-    {
-        BigNumber mana = new BigNumber();
-        foreach (Idler idler in Idlers)
-        {
-            mana += idler.Mana;
-        }
-        return mana;
-    }
+    }  
 
     public void AddItem(Equipment item)
     {

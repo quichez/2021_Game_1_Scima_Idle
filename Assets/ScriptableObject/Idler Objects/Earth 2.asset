@@ -24,32 +24,32 @@ MonoBehaviour:
   idlerUpgrades:
   - type: 0
     amount: 0
-    unlocked: 0
+    unlocked: 1
+    CostMantissa: 0
+    CostExponent: 0
+  - type: 1
+    amount: 2
+    unlocked: 1
+    CostMantissa: 0
+    CostExponent: 0
+  - type: 1
+    amount: 2
+    unlocked: 1
     CostMantissa: 0
     CostExponent: 0
   - type: 0
     amount: 0
-    unlocked: 0
+    unlocked: 1
     CostMantissa: 0
     CostExponent: 0
   - type: 0
     amount: 0
-    unlocked: 0
+    unlocked: 1
     CostMantissa: 0
     CostExponent: 0
   - type: 0
     amount: 0
-    unlocked: 0
-    CostMantissa: 0
-    CostExponent: 0
-  - type: 0
-    amount: 0
-    unlocked: 0
-    CostMantissa: 0
-    CostExponent: 0
-  - type: 0
-    amount: 0
-    unlocked: 0
+    unlocked: 1
     CostMantissa: 0
     CostExponent: 0
   PlayerClicker: {fileID: 0}

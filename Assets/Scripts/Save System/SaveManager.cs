@@ -6,7 +6,7 @@ public class SaveManager : MonoBehaviour
 {
     public static SaveManager Instance;
     public GameData Cache { get; private set; }
-    private List<IdlerObject> IdlerObjects = new List<IdlerObject>();
+    private List<IdlerObject> IdlerObjects;
 
     private void Awake()
     {
@@ -20,20 +20,22 @@ public class SaveManager : MonoBehaviour
     
     public static void SaveGame()
     {
-        IdlerObjectComparer idobComp = new IdlerObjectComparer();       
-        Instance.IdlerObjects.Sort(idobComp);
-        IdlerObject[] idobs = new IdlerObject[Instance.IdlerObjects.Count];
-        for (int i = 0; i < idobs.Length; i++)
+        //IdlerObjectComparer idobComp = new IdlerObjectComparer();       
+        //IdlerObjects.Sort(idobComp);
+        //IdlerObjects = Player.Instance.PlayerIdlers.IdlerObjects;
+        IdlerObject[] idobs = Player.Instance.PlayerIdlers.IdlerObjects;
+        /*for (int i = 0; i < idobs.Length; i++)
         {
             idobs[i] = Instance.IdlerObjects[i];
-        }
+        }*/
 
         GameData data = new GameData(
             Player.Instance.Gold,
             Player.Instance.Mana,
             Player.Instance.Inventory.Items,
             Player.Instance.Inventory.EquippedItems,
-            idobs
+            Stage.Instance.Zone,
+            Player.Instance.PlayerIdlers.IdlerObjects
             );
 
         SaveSystem.SaveGame(data);

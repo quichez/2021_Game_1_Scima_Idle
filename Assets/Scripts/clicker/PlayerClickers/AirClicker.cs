@@ -10,7 +10,7 @@ public class AirClicker : PlayerClicker, IPlayerClick
         if (Unlocked)
         {
             Debug.Log("Air Clicker Activated");
-            Stage.Instance.CurrentEnemy.TakeDamage(BaseDamage * (1 +_idler.IdlerObject.Level / 10));
+            //Stage.Instance.CurrentEnemy.TakeDamage(BaseDamage * (1 +_idler.IdlerObject.Level / 10));
         }
     }
 

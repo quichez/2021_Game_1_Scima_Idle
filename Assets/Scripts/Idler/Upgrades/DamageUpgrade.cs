@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageUpgrade2 : IdlerUpgrade2
+public class DamageUpgrade : IdlerUpgrade
 {
     private void Start()
     {

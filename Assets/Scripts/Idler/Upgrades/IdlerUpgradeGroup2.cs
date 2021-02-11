@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IdlerUpgradeGroup2 : MonoBehaviour
+public class IdlerUpgradeGroup : MonoBehaviour
 {
-    private IdlerUpgrade2[] Upgrades => GetComponentsInChildren<IdlerUpgrade2>();
+    private IdlerUpgrade[] Upgrades => GetComponentsInChildren<IdlerUpgrade>();
 
     //unused
     public void SetUnlockedUpgrades(IdlerObjectUpgrade[] idobUpgrades)

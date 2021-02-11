@@ -25,7 +25,7 @@ public class FireClicker : PlayerClicker, IPlayerClick
         int i = 0;
         while(i<3)
         {
-            Stage.Instance.CurrentEnemy.TakeDamage(BaseDamage + 10 * _idler.IdlerObject.Level / 15);
+            //Stage.Instance.CurrentEnemy.TakeDamage(BaseDamage + 10 * _idler.IdlerObject.Level / 15);
             yield return new WaitForSeconds(1.0f);
             i++;
         }

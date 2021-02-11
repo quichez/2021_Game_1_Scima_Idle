@@ -13,12 +13,12 @@ public class IdlerGUI : MonoBehaviour
     public TextMeshProUGUI DamageText;
     public TextMeshProUGUI ManaText;
 
-    public IdlerLevelUpButton2 Button;
-    public IdlerUpgradeGroup2 IdlerUpgradeGroup;
+    public IdlerLevelUpButton Button;
+    public IdlerUpgradeGroup IdlerUpgradeGroup;
 
-    private Idler2 _idler;
+    private Idler _idler;
 
-    public void SetIdler(Idler2 idler)
+    public void SetIdler(Idler idler)
     {
         _idler = idler;
         Icon.sprite = _idler.IdlerObject.Icon;
@@ -34,22 +34,22 @@ public class IdlerGUI : MonoBehaviour
             switch (_idler.IdlerObject.idlerUpgrades[i].type)
             {
                 case IdlerUpgradeType.Cost:
-                    upgradeButton.AddComponent<CostUpgrade2>();
+                    upgradeButton.AddComponent<CostUpgrade>();
                     break;
                 case IdlerUpgradeType.Damage:
-                    upgradeButton.AddComponent<DamageUpgrade2>();
+                    upgradeButton.AddComponent<DamageUpgrade>();
                     break;
                 case IdlerUpgradeType.Mana:
-                    upgradeButton.AddComponent<ManaUpgrade2>();
+                    upgradeButton.AddComponent<ManaUpgrade>();
                     break;
                 case IdlerUpgradeType.Clicker:
-                    upgradeButton.AddComponent<ClickerUnlock2>();
-                    upgradeButton.GetComponent<ClickerUnlock2>().SetIdler(_idler);
+                    upgradeButton.AddComponent<ClickerUnlock>();
+                    upgradeButton.GetComponent<ClickerUnlock>().SetIdler(_idler);
                     break;
                 default:
                     break;
             }
-            upgradeButton.GetComponent<IdlerUpgrade2>().SetUpgrade(_idler,i);
+            upgradeButton.GetComponent<IdlerUpgrade>().SetUpgrade(_idler,i);
             
         }        
     }

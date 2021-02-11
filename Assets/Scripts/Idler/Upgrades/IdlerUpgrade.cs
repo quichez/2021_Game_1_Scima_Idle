@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public enum IdlerUpgradeType { Cost, Damage, Mana, Clicker }
 
 [RequireComponent(typeof(TooltipTrigger))]
-public abstract class IdlerUpgrade2 : MonoBehaviour
+public abstract class IdlerUpgrade : MonoBehaviour
 {
     protected Image _image =>   GetComponent<Image>();
     protected Button _button => GetComponent<Button>();
     protected TooltipTrigger _tooltipTrigger => GetComponent<TooltipTrigger>();
-    protected Idler2 _idler;
+    protected Idler _idler;
 
     protected BigNumber UpgradeCost;
     protected float amount;
@@ -27,7 +27,7 @@ public abstract class IdlerUpgrade2 : MonoBehaviour
         _button.interactable = (Player.Instance.Gold - UpgradeCost >= BigNumber.Zero) && Unlocked == false;
     }
 
-    public void SetUpgrade(Idler2 idler, int i)
+    public void SetUpgrade(Idler idler, int i)
     {
         _idler = idler;
 

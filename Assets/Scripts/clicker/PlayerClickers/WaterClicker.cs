@@ -12,7 +12,8 @@ public class WaterClicker : PlayerClicker, IPlayerClick
     public void PlayerClick()
     {
         if (Unlocked && !Stage.Instance.CurrentEnemy.IsDying)
-            Player.Instance.ChangeMana(BaseDamage+ 5 * _idler.IdlerObject.Level / 15);
+            return;
+        //Player.Instance.ChangeMana(BaseDamage+ 5 * _idler.IdlerObject.Level / 15);
     }
 
     public override string ToString()

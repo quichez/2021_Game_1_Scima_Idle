@@ -15,7 +15,7 @@ public class IdlerGUIPanel : MonoBehaviour
 
     public void CreateIdlerGUIElements()
     {
-        foreach (Idler2 idler in playerIdlers.Idlers)
+        foreach (Idler idler in playerIdlers.IdlerList)
         {
             IdlerGUI clone = Instantiate(idlerGUIObject,transform2) as IdlerGUI;
             clone.SetIdler(idler);
