@@ -65,7 +65,7 @@ public class IdlerGUI : MonoBehaviour
 
     public void ResetLevel()
     {
-        _idler.IdlerObject.Level = 0;
+        _idler.LevelUp(-_idler.IdlerObject.Level);
         UpdateTextFields();
     }
 

@@ -6,7 +6,7 @@ public class EquipmentPanel : MonoBehaviour
 {
     private void UpdateEquipment()
     {
-        //Player.Instance?.OnInventoryUpdateCallback?.Invoke();
+        Player.Instance?.OnInventoryUpdateCallback?.Invoke();
     }
 
     private void OnEnable()
