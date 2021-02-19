@@ -11,7 +11,9 @@ public enum IdlerName
     [EnumMember(Value = "Fire")] Fire,
     [EnumMember(Value = "Lightning")] Lightning,
     [EnumMember(Value = "Light")] Light,
-    [EnumMember(Value = "Dark")] Dark
+    [EnumMember(Value = "Dark")] Dark,
+    [EnumMember(Value = "Fairy")] Fairy,
+    [EnumMember(Value = "Spectral")] Spectral
 }
 
 public enum IdlerStat
@@ -38,6 +40,8 @@ public class Idler
     private List<float> _damageModifiers = new List<float>(20);
     private List<float> _manaModifiers = new List<float>(20);
     private List<float> _costModifiers = new List<float>(20);
+
+    private PlayerClicker2 _playerClicker;
 
     public Idler(IdlerObject idob, PlayerIdlers master)
     {

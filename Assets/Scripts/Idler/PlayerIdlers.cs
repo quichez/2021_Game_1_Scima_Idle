@@ -30,7 +30,8 @@ public class PlayerIdlers : MonoBehaviour
         {
             //Set Idler2 values to IdOb2 values
             IdlerList.Add(new Idler(IdlerObjects[i],this));
-            IdlerList[i].LoadData(SaveManager.Instance.Cache.IdlerLevels[i]);
+            if(SaveManager.Instance?.Cache != null)
+                IdlerList[i].LoadData(SaveManager.Instance.Cache.IdlerLevels[i]);
         }
     }
 

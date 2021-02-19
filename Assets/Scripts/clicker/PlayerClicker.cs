@@ -9,7 +9,9 @@ public abstract class PlayerClicker : MonoBehaviour
     public float DamageExponent;
     public BigNumber BaseDamage => new BigNumber(DamageMantissa, DamageExponent);
 
-    public bool Unlocked { get; protected set; }    
+    public bool Unlocked { get; protected set; }
+
+    protected PlayerIdlers playerIdlers => GetComponent<PlayerIdlers>();
 
     public void Unlock(bool unlock)
     {

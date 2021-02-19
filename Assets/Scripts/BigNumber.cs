@@ -259,26 +259,71 @@ public class BigNumber
     }
 
     public static bool operator <(BigNumber a, BigNumber b)
-    {
-        if (b.Mantissa > a.Mantissa)
+    {        
+        if (a.Exponent < b.Exponent)
         {
-            if (b.Exponent >= a.Exponent)
-                return true;
-            else
-                return false;
-        }
-        else
-        {
-            if (b.Mantissa > 0.0)
+            if (a.Exponent >= 0.0) //e0 < e0
             {
-                if (b.Exponent > a.Exponent)
+                if (a.Mantissa < b.Mantissa)
+                {
+                    if (b.Mantissa <= 0.0)
+                        return false;
+                    else
+                        return true;
+                }
+                else // a.m >= b.m
+                {
+                    if (a.Mantissa > 0.0)
+                        return true;
+                    else
+                    {
+                        //Debug.Log("here!");
+                        return false;
+                    }
+                }
+
+            }
+            else   //e-1 vs e-2
+            {
+                if(a.Mantissa < b.Mantissa)
+                {
+                    if (b.Mantissa <= 0.0)  //-2e-1 vs -1e-2
+                        return true;
+                    else
+                    {
+                        //Debug.Log("here2!");
+                        return false;
+                    }
+                }
+                else
+                {
+                    if (a.Mantissa < 0.0) // -1e-1 vs -2e-2
+                        return true;
+                    else
+                    {
+                        //Debug.Log("here3!");
+                        return false;
+                    }
+                }
+            }
+        }
+        else  // e2 > e1
+        {
+            if (a.Mantissa < b.Mantissa) // 8e2 vs 9e1
+            {
+                if (a.Mantissa > 0.0)
+                    return false;
+                else
+                    return true;
+            }
+            else // 9e2 vs 8e1
+            {
+                if (a.Mantissa < 0.0)
                     return true;
                 else
                     return false;
             }
-            else
-                return false;
-        }
+        } 
     }
 
     public static bool operator >=(BigNumber a, BigNumber b)
@@ -311,7 +356,10 @@ public class BigNumber
     public static BigNumber Max(BigNumber minimum, BigNumber current)
     {        
         if (current < minimum)
+        {
+            
             return new BigNumber(minimum);
+        }
         else
             return new BigNumber(current);
     }

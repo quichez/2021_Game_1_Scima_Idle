@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c5052dd3469db14ab640435f1f34511, type: 3}
-  m_Name: Water 2
+  m_Name: Water
   m_EditorClassIdentifier: 
   IdlerName: 2
   Icon: {fileID: 21300000, guid: e407bdef6f7729743b8513a95f82725e, type: 3}
@@ -18,38 +18,38 @@ MonoBehaviour:
   DamageExponent: 2
   CostMantissa: 2.1
   CostExponent: 2
-  ManaMantissa: 6
+  ManaMantissa: 5
   ManaExponent: 1
   CostScale: 1.05
   idlerUpgrades:
-  - type: 0
+  - type: 3
     amount: 0
     unlocked: 0
-    CostMantissa: 0
-    CostExponent: 0
-  - type: 0
-    amount: 0
+    CostMantissa: 7
+    CostExponent: 2
+  - type: 1
+    amount: 1.1
     unlocked: 0
-    CostMantissa: 0
-    CostExponent: 0
-  - type: 0
-    amount: 0
+    CostMantissa: 1.5
+    CostExponent: 3
+  - type: 1
+    amount: 1.2
     unlocked: 0
-    CostMantissa: 0
-    CostExponent: 0
-  - type: 0
-    amount: 0
+    CostMantissa: 4.300000190734863
+    CostExponent: 3
+  - type: 2
+    amount: 0.9
     unlocked: 0
-    CostMantissa: 0
-    CostExponent: 0
+    CostMantissa: 8.5
+    CostExponent: 3
   - type: 0
-    amount: 0
+    amount: 0.95
     unlocked: 0
-    CostMantissa: 0
-    CostExponent: 0
-  - type: 0
-    amount: 0
+    CostMantissa: 2.5999999046325684
+    CostExponent: 4
+  - type: 2
+    amount: 0.8
     unlocked: 0
-    CostMantissa: 0
-    CostExponent: 0
+    CostMantissa: 1.2999999523162842
+    CostExponent: 5
   PlayerClicker: {fileID: 0}

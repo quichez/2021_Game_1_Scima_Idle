@@ -24,7 +24,7 @@ public class EarthClicker : PlayerClicker, IPlayerClick
     {
         if (Unlocked)
         {
-            //Stage.Instance.CurrentEnemy.TakeDamage(BaseDamage + IncreaseAmount * (1 + _idler.IdlerObject.Level/10)* _combo);
+            Stage.Instance.CurrentEnemy.TakeDamage(BaseDamage + IncreaseAmount * (1 + playerIdlers.IdlerObjects[1].Level/10)* _combo);
             _combo += 1;
             _timer = 0.0f;
         }            

@@ -39,6 +39,8 @@ public class IdlerObject : ScriptableObject
     public List<float> BaseCostModifiers { get; set; } = new List<float>();
     public List<float> BaseManaModifiers { get; set; } = new List<float>();
 
+    public PlayerClicker PlayerClicker;
+
     public BigNumber GetModifiedBaseDamage()
     {
         BigNumber baseDamage = new BigNumber(DamageMantissa, DamageExponent);
@@ -72,7 +74,6 @@ public class IdlerObject : ScriptableObject
         return baseCost;
     }
 
-    public PlayerClicker PlayerClicker;
 }
 
 [System.Serializable]

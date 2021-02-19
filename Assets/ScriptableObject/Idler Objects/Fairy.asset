@@ -10,45 +10,45 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c5052dd3469db14ab640435f1f34511, type: 3}
-  m_Name: Air 2
+  m_Name: Fairy
   m_EditorClassIdentifier: 
-  IdlerName: 0
-  Icon: {fileID: 21300000, guid: ea6cec5bcd9577c479dd5eff18450d4e, type: 3}
-  DamageMantissa: 5
-  DamageExponent: 0
-  CostMantissa: 5
-  CostExponent: 0
-  ManaMantissa: 3
-  ManaExponent: 0
-  CostScale: 1.05
+  IdlerName: 7
+  Icon: {fileID: 21300000, guid: 2d99c9d86fb05e842abc443430bfeb19, type: 3}
+  DamageMantissa: 5.3
+  DamageExponent: 6
+  CostMantissa: 2.54
+  CostExponent: 7
+  ManaMantissa: 8.3
+  ManaExponent: 5
+  CostScale: 1.1
   idlerUpgrades:
-  - type: 0
-    amount: 0.95
-    unlocked: 0
-    CostMantissa: 5
-    CostExponent: 1
   - type: 1
-    amount: 1.05
-    unlocked: 1
-    CostMantissa: 1
-    CostExponent: 2
-  - type: 2
-    amount: 0.95
-    unlocked: 1
-    CostMantissa: 5
-    CostExponent: 2
-  - type: 0
-    amount: 0.95
-    unlocked: 0
-    CostMantissa: 0
-    CostExponent: 0
-  - type: 2
-    amount: 0.9
+    amount: 0
     unlocked: 0
     CostMantissa: 0
     CostExponent: 0
   - type: 0
-    amount: 0.5
+    amount: 0
+    unlocked: 0
+    CostMantissa: 0
+    CostExponent: 0
+  - type: 0
+    amount: 0
+    unlocked: 0
+    CostMantissa: 0
+    CostExponent: 0
+  - type: 0
+    amount: 0
+    unlocked: 0
+    CostMantissa: 0
+    CostExponent: 0
+  - type: 0
+    amount: 0
+    unlocked: 0
+    CostMantissa: 0
+    CostExponent: 0
+  - type: 0
+    amount: 0
     unlocked: 0
     CostMantissa: 0
     CostExponent: 0

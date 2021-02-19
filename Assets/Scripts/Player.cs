@@ -10,11 +10,12 @@ public class Player : MonoBehaviour
     public int EquipmentSpace = 6;
 
     public BigNumber Gold { get; private set; } = new BigNumber(100000);
-    public BigNumber Mana { get; private set; } = new BigNumber(100000);
+    public BigNumber Mana { get; private set; } = new BigNumber(1,100);
 
     public Inventory Inventory { get; private set; }
     
     public IPlayerClick[] PlayerClickers => GetComponents<IPlayerClick>();
+    public BigNumber TotalClickDamage { get; private set; }
 
     public delegate void OnPlayerUpdate();
     public OnPlayerUpdate OnInventoryUpdateCallback;
@@ -32,6 +33,7 @@ public class Player : MonoBehaviour
             Instance = this;
         Inventory = new Inventory(InventorySpace, EquipmentSpace);
         PlayerIdlers = GetComponent<PlayerIdlers>();
+        TotalClickDamage = new BigNumber(100);
     }
 
     private void Start()
@@ -109,14 +111,14 @@ public class Player : MonoBehaviour
 
     public void EquipItem(InventorySlot item, EquipmentSlot destination)
     {
-        if(destination.SlotType == ((Equipment)item.Item).Type || item.Item.ID == -1)
+        if(destination.SlotType == (item.Item).Type || item.Item.ID == -1)
         {
             int one = item.transform.GetSiblingIndex();
             int two = destination.transform.GetSiblingIndex();
 
             Equipment temp = Inventory.Items[one];
             Inventory.Items[one] = Inventory.EquippedItems[two];
-            Inventory.EquippedItems[two] = (Equipment)temp;
+            Inventory.EquippedItems[two] = temp;
 
             OnInventoryUpdateCallback?.Invoke();
             OnEquipCallback?.Invoke();
@@ -168,7 +170,7 @@ public class Player : MonoBehaviour
 
     public void PlayerClick()
     {
-        Stage.Instance.CurrentEnemy.TakeDamage(new BigNumber(10));
+        Stage.Instance.CurrentEnemy.TakeDamage(TotalClickDamage);
         foreach (IPlayerClick click in PlayerClickers)
         {
             click.PlayerClick();

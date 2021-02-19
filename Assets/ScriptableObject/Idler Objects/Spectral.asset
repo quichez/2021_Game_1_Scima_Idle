@@ -10,46 +10,46 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c5052dd3469db14ab640435f1f34511, type: 3}
-  m_Name: Earth 2
+  m_Name: Spectral
   m_EditorClassIdentifier: 
-  IdlerName: 1
-  Icon: {fileID: 21300000, guid: 51ddbd96843c58d4d97b963cd69048f3, type: 3}
-  DamageMantissa: 2.5
-  DamageExponent: 1
-  CostMantissa: 3
-  CostExponent: 1
-  ManaMantissa: 1
-  ManaExponent: 1
-  CostScale: 1.05
+  IdlerName: 8
+  Icon: {fileID: 21300000, guid: c9a86506fb8aecf4aa060c77969fe12c, type: 3}
+  DamageMantissa: 6.5
+  DamageExponent: 7
+  CostMantissa: 4.06
+  CostExponent: 8
+  ManaMantissa: 9.5
+  ManaExponent: 6
+  CostScale: 1.1
   idlerUpgrades:
-  - type: 0
+  - type: 3
     amount: 0
-    unlocked: 1
-    CostMantissa: 0
-    CostExponent: 0
-  - type: 1
-    amount: 2
-    unlocked: 1
-    CostMantissa: 0
-    CostExponent: 0
-  - type: 1
-    amount: 2
-    unlocked: 1
+    unlocked: 0
     CostMantissa: 0
     CostExponent: 0
   - type: 0
     amount: 0
-    unlocked: 1
+    unlocked: 0
     CostMantissa: 0
     CostExponent: 0
   - type: 0
     amount: 0
-    unlocked: 1
+    unlocked: 0
     CostMantissa: 0
     CostExponent: 0
   - type: 0
     amount: 0
-    unlocked: 1
+    unlocked: 0
+    CostMantissa: 0
+    CostExponent: 0
+  - type: 0
+    amount: 0
+    unlocked: 0
+    CostMantissa: 0
+    CostExponent: 0
+  - type: 0
+    amount: 0
+    unlocked: 0
     CostMantissa: 0
     CostExponent: 0
   PlayerClicker: {fileID: 0}
