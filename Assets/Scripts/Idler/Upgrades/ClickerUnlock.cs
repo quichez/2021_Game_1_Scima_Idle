@@ -9,8 +9,8 @@ public class ClickerUnlock : IdlerUpgrade
 
     private void Start()
     {        
-        _tooltipTrigger.EnableToolTip(true);
-        _tooltipTrigger.SetToolTipText(playerClicker.ToString() + ":   " + UpgradeCost.ToString(), playerClicker.Description());
+        _tooltipTrigger.EnableToolTip(false);
+        //_tooltipTrigger.SetToolTipText(playerClicker.ToString() + ":   " + UpgradeCost.ToString(), playerClicker.Description());
     }
 
     public void SetIdler(Idler idler)

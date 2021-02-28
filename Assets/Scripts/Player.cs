@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
             Instance = this;
         Inventory = new Inventory(InventorySpace, EquipmentSpace);
         PlayerIdlers = GetComponent<PlayerIdlers>();
-        TotalClickDamage = new BigNumber(100);
+        TotalClickDamage = new BigNumber(50);
     }
 
     private void Start()
@@ -170,11 +170,7 @@ public class Player : MonoBehaviour
 
     public void PlayerClick()
     {
-        Stage.Instance.CurrentEnemy.TakeDamage(TotalClickDamage);
-        foreach (IPlayerClick click in PlayerClickers)
-        {
-            click.PlayerClick();
-        }
+        Stage.Instance.CurrentEnemy.TakeDamage(TotalClickDamage);        
     }
 }
 

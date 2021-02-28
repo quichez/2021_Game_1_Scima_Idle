@@ -10,46 +10,46 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c5052dd3469db14ab640435f1f34511, type: 3}
-  m_Name: Lightning
+  m_Name: BigGay
   m_EditorClassIdentifier: 
-  IdlerName: 4
-  Icon: {fileID: 21300000, guid: 7a74c69188394fa4ebc104b08c5dbf79, type: 3}
-  clickerEffect: {fileID: 4076491974380804034, guid: 560e612f9fa8c7d49865271631dbc155, type: 3}
-  DamageMantissa: 6.5
-  DamageExponent: 3
-  CostMantissa: 1.5
-  CostExponent: 4
-  ManaMantissa: 6
-  ManaExponent: 2
-  CostScale: 1.05
+  IdlerName: 0
+  Icon: {fileID: 21300000, guid: cc8043ad07ebd21418922bbd4249d577, type: 3}
+  clickerEffect: {fileID: 598863631181069584, guid: 57999777365c95743b44d7187543b8bd, type: 3}
+  DamageMantissa: 8.15
+  DamageExponent: 0
+  CostMantissa: 5.07
+  CostExponent: 0
+  ManaMantissa: 5.01
+  ManaExponent: 0
+  CostScale: 1.333
   idlerUpgrades:
   - type: 3
     amount: 0
     unlocked: 0
-    CostMantissa: 1
-    CostExponent: 1
-  - type: 0
-    amount: 0
-    unlocked: 0
-    CostMantissa: 0
+    CostMantissa: 4.03000020980835
     CostExponent: 0
   - type: 0
     amount: 0
     unlocked: 0
-    CostMantissa: 0
+    CostMantissa: 3.890000104904175
     CostExponent: 0
   - type: 0
     amount: 0
     unlocked: 0
-    CostMantissa: 0
+    CostMantissa: 4.03000020980835
     CostExponent: 0
   - type: 0
     amount: 0
     unlocked: 0
-    CostMantissa: 0
+    CostMantissa: 4.949999809265137
     CostExponent: 0
   - type: 0
     amount: 0
     unlocked: 0
-    CostMantissa: 0
+    CostMantissa: 4.800000190734863
+    CostExponent: 0
+  - type: 0
+    amount: 0
+    unlocked: 0
+    CostMantissa: 4.590000152587891
     CostExponent: 0

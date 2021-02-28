@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using UnityEngine;
+using PlayerClickers;
 
 public enum IdlerName
 {
@@ -41,17 +42,20 @@ public class Idler
     private List<float> _manaModifiers = new List<float>(20);
     private List<float> _costModifiers = new List<float>(20);
 
-    private PlayerClicker2 _playerClicker;
+    public PlayerClicker2 _playerClicker { get; }
 
     public Idler(IdlerObject idob, PlayerIdlers master)
     {
-        _playerIdler = master;
         IdlerObject = idob;
+        _playerIdler = master;
+        _playerClicker = PlayerClickerFactory.GetClicker(IdlerObject.name);
+
         UpdateIdler();
+
+
         OnLevelUpCallback += UpdateIdler;
         OnLevelUpCallback += _playerIdler.UpdateTotalIdlerDamage;
         OnLevelUpCallback += _playerIdler.UpdateTotalIdlerManaCost;
-
         Player.Instance.OnEquipCallback += UpdateIdler;        
     }
 
@@ -96,14 +100,23 @@ public class Idler
     {
         return BigNumber.Zero;
     }
-
-
+   
     /// <summary>
     /// Load data for this class
     /// </summary>
     public void LoadData(int level = 0)
     {
         IdlerObject.Level = level;
+        OnLevelUpCallback?.Invoke();
+    }
+
+    public void LoadData(bool[] upgradesUnlocked, int level = 0)
+    {
+        IdlerObject.Level = level;
+        for (int i = 0; i < IdlerObject.idlerUpgrades.Length; i++)
+        {
+            IdlerObject.idlerUpgrades[i].unlocked = upgradesUnlocked[i];
+        }
         OnLevelUpCallback?.Invoke();
     }
 }

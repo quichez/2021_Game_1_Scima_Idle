@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IdlerName: 1
   Icon: {fileID: 21300000, guid: 51ddbd96843c58d4d97b963cd69048f3, type: 3}
+  clickerEffect: {fileID: 1610399588110667198, guid: 857f3186db3dd9e4c8d5b00df12d4f2d, type: 3}
   DamageMantissa: 2.5
   DamageExponent: 1
   CostMantissa: 3
@@ -52,4 +53,3 @@ MonoBehaviour:
     unlocked: 0
     CostMantissa: 1.7999999523162842
     CostExponent: 4
-  PlayerClicker: {fileID: 0}

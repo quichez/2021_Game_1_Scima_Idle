@@ -425,6 +425,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105983866}
   m_CullTransparentMesh: 1
+--- !u!1 &160876667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 160876668}
+  - component: {fileID: 160876669}
+  m_Layer: 0
+  m_Name: Text Spawn Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &160876668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160876667}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2, y: 1.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1276902022}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &160876669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160876667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2ee334004495ce488a4aec7cf47d504, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damagePopUp: {fileID: 5287796071940847935, guid: e37c55de0428d9f48a161f06b241ec11, type: 3}
 --- !u!1 &188333199
 GameObject:
   m_ObjectHideFlags: 0
@@ -3568,7 +3612,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 30
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -4836,6 +4880,7 @@ Transform:
   m_Children:
   - {fileID: 383479099}
   - {fileID: 1911533268}
+  - {fileID: 160876668}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7779,13 +7824,6 @@ GameObject:
   - component: {fileID: 2075155705}
   - component: {fileID: 2075155704}
   - component: {fileID: 2075155713}
-  - component: {fileID: 2075155707}
-  - component: {fileID: 2075155706}
-  - component: {fileID: 2075155712}
-  - component: {fileID: 2075155711}
-  - component: {fileID: 2075155710}
-  - component: {fileID: 2075155709}
-  - component: {fileID: 2075155708}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -7821,106 +7859,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2075155706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075155703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c222d19ea4c6dc9458100679d4cbd9f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DamageMantissa: 1
-  DamageExponent: 1
-  Timer: 0.5
-  IncreaseAmount: 3
---- !u!114 &2075155707
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075155703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d48da576afad5084db3879dee853b347, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DamageMantissa: 1
-  DamageExponent: 1
---- !u!114 &2075155708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075155703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7e34c352619f274a9c276935ee72211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DamageMantissa: 0
-  DamageExponent: 0
---- !u!114 &2075155709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075155703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35618c74900238f49a83d2d6a5d402e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DamageMantissa: 0
-  DamageExponent: 0
---- !u!114 &2075155710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075155703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94b98515c5fdaed468fbd7f24300d4ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DamageMantissa: 2
-  DamageExponent: 2
---- !u!114 &2075155711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075155703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c79375f7b4f1e47438bb495df44f3582, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DamageMantissa: 1
-  DamageExponent: 2
---- !u!114 &2075155712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075155703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95ef95852f150a74493e68f6ab2e8660, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DamageMantissa: 1
-  DamageExponent: 1
 --- !u!114 &2075155713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8078,8 +8016,8 @@ RectTransform:
   m_Father: {fileID: 401186393}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.21, y: 0.1}
-  m_AnchorMax: {x: 0.79, y: 0.74}
+  m_AnchorMin: {x: 0.2, y: 0.1}
+  m_AnchorMax: {x: 0.8, y: 0.75}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -8127,9 +8065,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2075155704}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: PlayerClick
+      - m_Target: {fileID: 2075155713}
+        m_TargetAssemblyTypeName: PlayerIdlers, Assembly-CSharp
+        m_MethodName: OnPlayerClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8141,7 +8079,19 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 835036298}
         m_TargetAssemblyTypeName: EffectSpawner, Assembly-CSharp
-        m_MethodName: InstantiateEffect
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2075155704}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: PlayerClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -10,6 +10,8 @@ public class IdlerObject : ScriptableObject
     public int Index { get; set; }
     public Sprite Icon;
 
+    public GameObject clickerEffect;
+
     #region BigNumber Members
     [Header("Base Damage")]
     [Range(0.0f, 9.999f)] public float DamageMantissa;
@@ -38,8 +40,6 @@ public class IdlerObject : ScriptableObject
     public List<float> BaseDamageModifiers { get; set; } = new List<float>();
     public List<float> BaseCostModifiers { get; set; } = new List<float>();
     public List<float> BaseManaModifiers { get; set; } = new List<float>();
-
-    public PlayerClicker PlayerClicker;
 
     public BigNumber GetModifiedBaseDamage()
     {

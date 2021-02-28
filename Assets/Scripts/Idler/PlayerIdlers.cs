@@ -31,7 +31,7 @@ public class PlayerIdlers : MonoBehaviour
             //Set Idler2 values to IdOb2 values
             IdlerList.Add(new Idler(IdlerObjects[i],this));
             if(SaveManager.Instance?.Cache != null)
-                IdlerList[i].LoadData(SaveManager.Instance.Cache.IdlerLevels[i]);
+                IdlerList[i].LoadData(SaveManager.Instance.Cache.UpgradesUnlocked[i], SaveManager.Instance.Cache.IdlerLevels[i]);
         }
     }
 
@@ -65,6 +65,35 @@ public class PlayerIdlers : MonoBehaviour
         OnPlayerManaUpdateCallback?.Invoke();
     }
 
+    public void OnPlayerClick()
+    {
+        if (Stage.Instance.CurrentEnemy.IsDying)
+            return;
+
+        BigNumber tempClick = BigNumber.Zero;
+        tempClick += Player.Instance.TotalClickDamage;
+        foreach (Idler idler in IdlerList)
+        {
+            for (int i = 0; i < idler.IdlerObject.idlerUpgrades.Length; i++)
+            {
+                if(idler.IdlerObject.idlerUpgrades[i].type == IdlerUpgradeType.Clicker)
+                {                    
+                    if (idler.IdlerObject.idlerUpgrades[i].unlocked)
+                    {
+                        tempClick += idler._playerClicker.Click(idler.IdlerObject.Level);
+                        if (idler._playerClicker.Activated)
+                        {
+                            GameObject xf = EffectSpawner.Instance.InstantiateEffect(idler.IdlerObject.clickerEffect);
+                            idler._playerClicker.Deactivate();
+                            idler._playerClicker.DelayedDestroy(xf);
+                        }
+                    }
+                }
+            }
+        }
+        
+        TestDamagePopUpController.Instance.PopUpDamage(tempClick);
+    }
 
     //Methods
     //Probably all idlers

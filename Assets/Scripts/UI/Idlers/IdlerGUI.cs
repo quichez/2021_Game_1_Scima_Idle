@@ -56,7 +56,7 @@ public class IdlerGUI : MonoBehaviour
 
     public void UpdateTextFields()
     {
-        IdlerName.text = _idler.IdlerObject.IdlerName.ToString();
+        IdlerName.text = _idler.IdlerObject.name;
         LevelText.text = "Level " + _idler.IdlerObject.Level.ToString();
         DamageText.text = _idler.Damage.ToString() + " DPS";
         ManaText.text = _idler.Mana.ToString() + " MPS";
