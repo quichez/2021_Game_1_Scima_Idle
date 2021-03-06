@@ -156,3 +156,17 @@ public class Equipment : Item<Equipment>
     }
 
 }
+
+public class TestItem
+{
+    int ID;
+    string Title;
+    string Description;
+    
+
+
+
+}
+
+
+

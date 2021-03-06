@@ -91,7 +91,7 @@ public class PlayerIdlers : MonoBehaviour
                 }
             }
         }
-        
+        Stage.Instance.CurrentEnemy.TakeDamage(tempClick);
         TestDamagePopUpController.Instance.PopUpDamage(tempClick);
     }
 

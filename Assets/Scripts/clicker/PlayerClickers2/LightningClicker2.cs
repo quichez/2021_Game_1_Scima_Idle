@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using PlayerClickers;
 
-public class LightningClicker2 : PlayerClicker2
+public class LightningClicker2 : PlayerClicker
 {
     public override string ClickerName => "Lightning Clicker";
 
@@ -14,7 +14,7 @@ public class LightningClicker2 : PlayerClicker2
         if (Random.value > 0.8f)
         {
             Activated = true;
-            return (Player.Instance.TotalClickDamage * (.50f + .25f * (level / 10))).Rounded;
+            return (Player.Instance.TotalClickDamage * (.75f + .25f * (level / 10))).Rounded;
         }
         else
             return BigNumber.Zero;

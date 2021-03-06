@@ -2,7 +2,7 @@
 using System.Collections;
 using PlayerClickers;
 
-public class FairyClicker2 : PlayerClicker2
+public class FairyClicker2 : PlayerClicker
 {
     public override string ClickerName => "Fairy Clicker";
 

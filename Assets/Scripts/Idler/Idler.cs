@@ -42,7 +42,7 @@ public class Idler
     private List<float> _manaModifiers = new List<float>(20);
     private List<float> _costModifiers = new List<float>(20);
 
-    public PlayerClicker2 _playerClicker { get; }
+    public PlayerClicker _playerClicker { get; }
 
     public Idler(IdlerObject idob, PlayerIdlers master)
     {

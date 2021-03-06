@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using PlayerClickers;
 
-public class EarthClicker2 : PlayerClicker2, IClickerTimer
+public class EarthClicker2 : PlayerClicker, IClickerTimer
 {
     public override string ClickerName => "Earth Clicker";
 

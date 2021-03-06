@@ -1,22 +1,70 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
+using System.Linq;
 using UnityEngine;
 
-public abstract class PlayerClicker : MonoBehaviour
+namespace PlayerClickers
 {
-    [Header("Base Damage")]
-    [Range(0.000f, 9.999f)] public float DamageMantissa;
-    public float DamageExponent;
-    public BigNumber BaseDamage => new BigNumber(DamageMantissa, DamageExponent);
 
-    public bool Unlocked { get; protected set; }
-
-    protected PlayerIdlers playerIdlers => GetComponent<PlayerIdlers>();
-
-    public void Unlock(bool unlock)
+    public abstract class PlayerClicker
     {
-        Unlocked = unlock;
+        public abstract string ClickerName { get; }
+        public abstract string ClickerType { get; }
+        public abstract string Description { get; }
+        public abstract BigNumber Click(int level);       
+        public abstract void DelayedDestroy(GameObject effect);
+
+        public bool Activated { get; protected set; }
+        public bool Unlocked { get; protected set; }
+        public void Deactivate() => Activated = false;
+        public void Unlock(bool unlock) => Unlocked = unlock;
     }
 
-    public abstract string Description();
+    public interface IClickerTimer
+    {
+        float Timer { get; }
+        float Timer2 { get; set; }        
+        bool TimerInEffect { get; set; }
+        IEnumerator ClickTimer();
+    }
+
+    public class PlayerClickerFactory
+    {
+        private static Dictionary<string, Type> clickersByName;
+        private static bool IsInitialized => clickersByName != null;
+
+        private static void InitializeFactory()
+        {
+            //Check if this exists
+            if (IsInitialized)
+                return;
+
+            //Create new dictionary
+            clickersByName = new Dictionary<string, Type>();
+
+            // Sets clickerTypes to Type[], then for each Type, create a temp instance and add to dictionary
+            var clickerTypes = Assembly.GetAssembly(typeof(PlayerClicker)).GetTypes().Where(tgt => tgt.IsClass && !tgt.IsAbstract && tgt.IsSubclassOf(typeof(PlayerClicker)));
+            foreach (var type in clickerTypes)
+            {
+                var temp = Activator.CreateInstance(type) as PlayerClicker;
+                clickersByName.Add(temp.ClickerType, type);
+            }
+        }
+
+        public static PlayerClicker GetClicker(string input)
+        {
+            InitializeFactory();
+            if (clickersByName.ContainsKey(input))
+            {
+                Type type = clickersByName[input];
+                var clicker = Activator.CreateInstance(type) as PlayerClicker;
+                return clicker;
+            }
+            return null;
+        }
+    }
 }
+
+

@@ -7879,8 +7879,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: eb88e5bdff1ba88469c92e5b9c37eea9, type: 2}
   - {fileID: 11400000, guid: 2c6398cffd0b0f64c9cd9f48d44aa0a2, type: 2}
   - {fileID: 11400000, guid: 0dc311c0ac3a30b4f82ff19f62b6d03a, type: 2}
-  - {fileID: 11400000, guid: 8bfc9575ad581e54faca327166e806a5, type: 2}
-  - {fileID: 11400000, guid: 921de55e8ba9d0d4ba4596abc6ba064b, type: 2}
 --- !u!1001 &2086532270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8068,18 +8066,6 @@ MonoBehaviour:
       - m_Target: {fileID: 2075155713}
         m_TargetAssemblyTypeName: PlayerIdlers, Assembly-CSharp
         m_MethodName: OnPlayerClick
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 835036298}
-        m_TargetAssemblyTypeName: EffectSpawner, Assembly-CSharp
-        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

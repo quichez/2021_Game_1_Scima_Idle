@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public int InventorySpace = 24;
     public int EquipmentSpace = 6;
 
-    public BigNumber Gold { get; private set; } = new BigNumber(100000);
+    public BigNumber Gold { get; private set; } = new BigNumber(1e12);
     public BigNumber Mana { get; private set; } = new BigNumber(1,100);
 
     public Inventory Inventory { get; private set; }

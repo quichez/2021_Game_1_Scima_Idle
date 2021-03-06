@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IdlerName: 8
   Icon: {fileID: 21300000, guid: c9a86506fb8aecf4aa060c77969fe12c, type: 3}
+  clickerEffect: {fileID: 0}
   DamageMantissa: 6.5
   DamageExponent: 7
   CostMantissa: 4.06
@@ -25,31 +26,30 @@ MonoBehaviour:
   - type: 3
     amount: 0
     unlocked: 0
-    CostMantissa: 0
-    CostExponent: 0
+    CostMantissa: 4.400000095367432
+    CostExponent: 9
   - type: 0
-    amount: 0
+    amount: 0.9
     unlocked: 0
-    CostMantissa: 0
-    CostExponent: 0
+    CostMantissa: 8.800000190734863
+    CostExponent: 9
+  - type: 1
+    amount: 1.2
+    unlocked: 0
+    CostMantissa: 2.6500000953674316
+    CostExponent: 10
+  - type: 1
+    amount: 1.2
+    unlocked: 0
+    CostMantissa: 5.28000020980835
+    CostExponent: 10
+  - type: 2
+    amount: 0.9
+    unlocked: 0
+    CostMantissa: 1.600000023841858
+    CostExponent: 11
   - type: 0
-    amount: 0
+    amount: 0.95
     unlocked: 0
-    CostMantissa: 0
-    CostExponent: 0
-  - type: 0
-    amount: 0
-    unlocked: 0
-    CostMantissa: 0
-    CostExponent: 0
-  - type: 0
-    amount: 0
-    unlocked: 0
-    CostMantissa: 0
-    CostExponent: 0
-  - type: 0
-    amount: 0
-    unlocked: 0
-    CostMantissa: 0
-    CostExponent: 0
-  PlayerClicker: {fileID: 0}
+    CostMantissa: 7.949999809265137
+    CostExponent: 11

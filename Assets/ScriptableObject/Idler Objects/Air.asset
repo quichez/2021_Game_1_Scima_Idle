@@ -17,7 +17,7 @@ MonoBehaviour:
   clickerEffect: {fileID: 598863631181069584, guid: 57999777365c95743b44d7187543b8bd, type: 3}
   DamageMantissa: 5
   DamageExponent: 0
-  CostMantissa: 5
+  CostMantissa: 3
   CostExponent: 0
   ManaMantissa: 3
   ManaExponent: 0
@@ -26,30 +26,30 @@ MonoBehaviour:
   - type: 3
     amount: 0
     unlocked: 0
-    CostMantissa: 5
+    CostMantissa: 1.5
     CostExponent: 1
   - type: 1
     amount: 1.05
     unlocked: 0
-    CostMantissa: 1
-    CostExponent: 2
+    CostMantissa: 3
+    CostExponent: 1
   - type: 2
     amount: 0.95
     unlocked: 1
-    CostMantissa: 5
-    CostExponent: 2
+    CostMantissa: 9
+    CostExponent: 1
   - type: 0
     amount: 0.95
     unlocked: 0
-    CostMantissa: 0
-    CostExponent: 0
+    CostMantissa: 1.7999999523162842
+    CostExponent: 2
   - type: 2
     amount: 0.9
     unlocked: 1
-    CostMantissa: 0
-    CostExponent: 0
+    CostMantissa: 5.400000095367432
+    CostExponent: 2
   - type: 0
     amount: 0.5
     unlocked: 0
-    CostMantissa: 0
-    CostExponent: 0
+    CostMantissa: 2.700000047683716
+    CostExponent: 3

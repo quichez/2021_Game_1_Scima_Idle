@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using PlayerClickers;
 
-public class WaterClicker2 : PlayerClicker2
+public class WaterClicker2 : PlayerClicker
 {
     public override string ClickerName => "Water Clicker";
 
@@ -11,7 +11,7 @@ public class WaterClicker2 : PlayerClicker2
 
     public override BigNumber Click(int level)
     {
-        //throw new System.NotImplementedException();
+        Player.Instance.ChangeMana(new BigNumber(10) * (1 + level / 15));
         return BigNumber.Zero;
     }
 

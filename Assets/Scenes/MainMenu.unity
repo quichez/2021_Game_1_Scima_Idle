@@ -1521,7 +1521,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Scima Idle - v 1.1b
+  m_text: Scima Idle - v 1.0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2269,9 +2269,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "v1.2b:\n- Added fading damage text\n- Added some idlers\n- Clicker upgrades
-    partially returned\n- other things?\n\nv1.1b:\n- made less callbacks.\n- Bug
-    fixes.\n- Clicker upgrades temporarily removed.\n- Back end changes. \n\nv1.0b:\nbeta
+  m_text: "v1.0\n- real release???\n- removed a lot of unused code\n\nv1.3b\n- ????
+    play myy game\n\n\nv1.2b:\n- Added fading damage text\n- Added some idlers\n-
+    Clicker upgrades partially returned\n- other things?\n\nv1.1b:\n- made less callbacks.\n-
+    Bug fixes.\n- Clicker upgrades temporarily removed.\n- Back end changes. \n\nv1.0b:\nbeta
     release"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

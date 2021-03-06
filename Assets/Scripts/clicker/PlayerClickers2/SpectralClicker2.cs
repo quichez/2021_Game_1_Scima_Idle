@@ -2,7 +2,7 @@
 using System.Collections;
 using PlayerClickers;
 
-public class SpectralClicker2 : PlayerClicker2
+public class SpectralClicker2 : PlayerClicker
 {
     public override string ClickerName => "Spectral Clicker";
 

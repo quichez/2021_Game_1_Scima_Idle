@@ -31,25 +31,25 @@ MonoBehaviour:
   - type: 1
     amount: 1.1
     unlocked: 0
-    CostMantissa: 1.5
+    CostMantissa: 1.399999976158142
     CostExponent: 3
   - type: 1
     amount: 1.2
     unlocked: 0
-    CostMantissa: 4.300000190734863
+    CostMantissa: 4.199999809265137
     CostExponent: 3
   - type: 2
     amount: 0.9
     unlocked: 0
-    CostMantissa: 8.5
+    CostMantissa: 8.399999618530273
     CostExponent: 3
   - type: 0
     amount: 0.95
     unlocked: 0
-    CostMantissa: 2.5999999046325684
+    CostMantissa: 2.5
     CostExponent: 4
   - type: 2
     amount: 0.8
     unlocked: 0
-    CostMantissa: 1.2999999523162842
+    CostMantissa: 1.25
     CostExponent: 5

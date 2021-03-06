@@ -5,18 +5,17 @@ using UnityEngine;
 
 public class ClickerUnlock : IdlerUpgrade
 {
-    public PlayerClicker playerClicker;
-
     private void Start()
     {        
-        _tooltipTrigger.EnableToolTip(false);
-        //_tooltipTrigger.SetToolTipText(playerClicker.ToString() + ":   " + UpgradeCost.ToString(), playerClicker.Description());
+        _tooltipTrigger.EnableToolTip(true);
     }
 
     public void SetIdler(Idler idler)
     {
         _idler = idler;
         _image.sprite = _idler.IdlerObject.Icon;
+        //maybe for variety sake, use a foreach to find the clicker upgrade in the IdlerObject's upgrade list.
+        _tooltipTrigger.SetToolTipText(idler._playerClicker.ClickerName + ": " + idler.IdlerObject.idlerUpgrades[0].UpgradeCost.ToString(), idler._playerClicker.Description);
     }
 
 }
