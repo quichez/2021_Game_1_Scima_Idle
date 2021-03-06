@@ -11,6 +11,7 @@ public class WaterClicker2 : PlayerClicker
 
     public override BigNumber Click(int level)
     {
+        Activated = true;
         Player.Instance.ChangeMana(new BigNumber(10) * (1 + level / 15));
         return BigNumber.Zero;
     }
