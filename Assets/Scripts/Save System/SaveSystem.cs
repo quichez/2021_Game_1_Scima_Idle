@@ -50,12 +50,14 @@ public class GameData
     public EquipmentData[] InventoryData;
     public EquipmentData[] EquipmentData;
 
+    public int[] zoneNumber = new int[2];
+
     public GameData()
     {
 
     }
 
-    public GameData(BigNumber gold, BigNumber mana, List<Equipment> invItemData, List<Equipment> equipData, params IdlerObject[] idlerObjects)
+    public GameData(BigNumber gold, BigNumber mana, List<Equipment> invItemData, List<Equipment> equipData, Zone zoneNum, params IdlerObject[] idlerObjects)
     {
         GoldMant = gold.Mantissa;
         GoldExp = gold.Exponent;
@@ -67,10 +69,10 @@ public class GameData
         {
             
             IdlerLevels[i] = idlerObjects[i].Level;
-            UpgradesUnlocked[i] = new bool[idlerObjects[i].UpgradesUnlocked.Length];
+            UpgradesUnlocked[i] = new bool[idlerObjects[i].idlerUpgrades.Length];
             for (int j = 0; j < UpgradesUnlocked[i].Length; j++)
             {
-                UpgradesUnlocked[i][j] = idlerObjects[i].UpgradesUnlocked[j];
+                UpgradesUnlocked[i][j] = idlerObjects[i].idlerUpgrades[j].unlocked;
             }
         }
         Debug.Log(invItemData.Count);
@@ -85,7 +87,8 @@ public class GameData
         {
             EquipmentData[equipData.IndexOf(item)] = new EquipmentData(item);
         }
-
+        zoneNumber[0] = zoneNum.Area;
+        zoneNumber[1] = zoneNum.Enemy;
     }
 }
 

@@ -9,16 +9,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f541b8d3b6a7e9e4a835fd3ef78b7976, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c5052dd3469db14ab640435f1f34511, type: 3}
   m_Name: Lightning
   m_EditorClassIdentifier: 
-  IdlerName: 0
+  IdlerName: 4
   Icon: {fileID: 21300000, guid: 7a74c69188394fa4ebc104b08c5dbf79, type: 3}
-  DamageMantissa: 6.66
+  clickerEffect: {fileID: 2930556837362490639, guid: 58f1810dde535a3498a1a40d30c2e85f, type: 3}
+  DamageMantissa: 6.5
   DamageExponent: 3
-  CostMantissa: 1.51
+  CostMantissa: 1.5
   CostExponent: 4
-  ManaMantissa: 3
-  ManaExponent: 3
+  ManaMantissa: 6
+  ManaExponent: 2
   CostScale: 1.05
-  UpgradesUnlocked: 000000000000
+  idlerUpgrades:
+  - type: 3
+    amount: 0
+    unlocked: 0
+    CostMantissa: 5.099999904632568
+    CostExponent: 4
+  - type: 1
+    amount: 1.1
+    unlocked: 1
+    CostMantissa: 1.100000023841858
+    CostExponent: 5
+  - type: 2
+    amount: 0.8
+    unlocked: 0
+    CostMantissa: 3.0999999046325684
+    CostExponent: 5
+  - type: 0
+    amount: 0.9
+    unlocked: 0
+    CostMantissa: 6.119999885559082
+    CostExponent: 5
+  - type: 1
+    amount: 1.1
+    unlocked: 0
+    CostMantissa: 1.850000023841858
+    CostExponent: 6
+  - type: 2
+    amount: 0.8
+    unlocked: 0
+    CostMantissa: 9.199999809265137
+    CostExponent: 6

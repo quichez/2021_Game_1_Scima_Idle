@@ -9,23 +9,21 @@ public class Player : MonoBehaviour
     public int InventorySpace = 24;
     public int EquipmentSpace = 6;
 
-    public BigNumber Gold { get; private set; } = BigNumber.Zero;
-    public BigNumber Mana { get; private set; } = BigNumber.Zero;
+    public BigNumber Gold { get; private set; } = new BigNumber(1e12);
+    public BigNumber Mana { get; private set; } = new BigNumber(1,100);
 
     public Inventory Inventory { get; private set; }
-
-    public GameObject IdlerList;
-    public Idler[] Idlers => IdlerList.GetComponentsInChildren<Idler>();
+    
     public IPlayerClick[] PlayerClickers => GetComponents<IPlayerClick>();
-
-    public BigNumber Damage => TotalIdlerDamage() * Time.deltaTime;
-    public BigNumber ManaCost => TotalIdlerManaCost() * Time.deltaTime;
-
+    public BigNumber TotalClickDamage { get; private set; }
 
     public delegate void OnPlayerUpdate();
     public OnPlayerUpdate OnInventoryUpdateCallback;
+    public OnPlayerUpdate OnEquipCallback;
     public OnPlayerUpdate OnGoldUpdateCallback;
     public OnPlayerUpdate OnManaUpdateCallback;
+
+    public PlayerIdlers PlayerIdlers { get; private set; }
 
     private void Awake()
     {
@@ -33,7 +31,9 @@ public class Player : MonoBehaviour
             Destroy(gameObject);
         else
             Instance = this;
-        Inventory = new Inventory(InventorySpace, EquipmentSpace);       
+        Inventory = new Inventory(InventorySpace, EquipmentSpace);
+        PlayerIdlers = GetComponent<PlayerIdlers>();
+        TotalClickDamage = new BigNumber(50);
     }
 
     private void Start()
@@ -46,7 +46,6 @@ public class Player : MonoBehaviour
                 Gold = new BigNumber(playerCache.GoldMant, playerCache.GoldExp).Rounded;                            
             if (!double.IsNaN(playerCache.ManaMant) && !double.IsNaN(playerCache.ManaExp))
                 Mana = new BigNumber(playerCache.ManaMant, playerCache.ManaExp).Rounded;
-            Debug.Log(playerCache.InventoryData.Length);
             Inventory.Items.Clear();
             Inventory.EquippedItems.Clear();
             foreach (EquipmentData item in playerCache.InventoryData)
@@ -67,39 +66,21 @@ public class Player : MonoBehaviour
                 Inventory.EquippedItems.Add(item.LoadEquipment());
             }
         }
+        OnInventoryUpdateCallback?.Invoke();
+        OnEquipCallback?.Invoke();
         OnGoldUpdateCallback?.Invoke();
         OnManaUpdateCallback?.Invoke();
     }
 
     private void Update()
     {
-        if (Mana > BigNumber.Zero && !Stage.Instance.CurrentEnemy.IsDying)
+        if ((Mana - PlayerIdlers.ManaPerFrame) >= BigNumber.Zero && !Stage.Instance.CurrentEnemy.IsDying)
         {
-            Mana = BigNumber.Max(BigNumber.Zero, Mana - ManaCost);
-            Stage.Instance.CurrentEnemy?.TakeDamage(Damage);
+            Mana = BigNumber.Max(BigNumber.Zero, Mana - PlayerIdlers.ManaPerFrame);
+            Stage.Instance.CurrentEnemy?.TakeDamage(PlayerIdlers.DamagePerFrame);
         }        
         OnManaUpdateCallback?.Invoke();
-    }
-
-    public BigNumber TotalIdlerDamage()
-    {
-        BigNumber dmg = new BigNumber();
-        foreach (Idler idler in Idlers)
-        {
-            dmg += idler.Damage;
-        }        
-        return dmg;
-    }
-
-    public BigNumber TotalIdlerManaCost()
-    {
-        BigNumber mana = new BigNumber();
-        foreach (Idler idler in Idlers)
-        {
-            mana += idler.Mana;
-        }
-        return mana;
-    }
+    }  
 
     public void AddItem(Equipment item)
     {
@@ -130,16 +111,17 @@ public class Player : MonoBehaviour
 
     public void EquipItem(InventorySlot item, EquipmentSlot destination)
     {
-        if(destination.SlotType == ((Equipment)item.Item).Type || item.Item.ID == -1)
+        if(destination.SlotType == (item.Item).Type || item.Item.ID == -1)
         {
             int one = item.transform.GetSiblingIndex();
             int two = destination.transform.GetSiblingIndex();
 
             Equipment temp = Inventory.Items[one];
             Inventory.Items[one] = Inventory.EquippedItems[two];
-            Inventory.EquippedItems[two] = (Equipment)temp;
+            Inventory.EquippedItems[two] = temp;
 
             OnInventoryUpdateCallback?.Invoke();
+            OnEquipCallback?.Invoke();
         }
     }
 
@@ -157,6 +139,7 @@ public class Player : MonoBehaviour
             Inventory.Items[two] = temp;
         }
         OnInventoryUpdateCallback?.Invoke();
+        OnEquipCallback?.Invoke();
     }
 
     public void RemoveItem(InventorySlot removal)
@@ -170,28 +153,24 @@ public class Player : MonoBehaviour
     {
         int i = Inventory.EquippedItems.FindIndex(x => x == removal.Item);
         Inventory.EquippedItems[i] = new Equipment();
-        OnInventoryUpdateCallback?.Invoke();
+        OnEquipCallback?.Invoke();
     }
 
     public void ChangeGold(BigNumber amount)
     {
-        Gold += amount.Rounded;
+        Gold = BigNumber.Max(BigNumber.Zero, Gold + amount);
         OnGoldUpdateCallback?.Invoke();
     }
 
     public void ChangeMana(BigNumber amount)
     {
-        Mana += amount.Rounded;
+        Mana = BigNumber.Max(BigNumber.Zero, Mana + amount);        
         OnManaUpdateCallback?.Invoke();
     }
 
     public void PlayerClick()
     {
-        Stage.Instance.CurrentEnemy.TakeDamage(new BigNumber(10));
-        foreach (IPlayerClick click in PlayerClickers)
-        {
-            click.PlayerClick();
-        }
+        Stage.Instance.CurrentEnemy.TakeDamage(TotalClickDamage);        
     }
 }
 

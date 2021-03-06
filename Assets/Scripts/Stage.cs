@@ -49,6 +49,8 @@ public class Stage : MonoBehaviour
 
     private void Start()
     {
+        if (SaveManager.Instance?.Cache != null)
+            Zone = new Zone(SaveManager.Instance.Cache.zoneNumber[0], SaveManager.Instance.Cache.zoneNumber[1]);
         SpawnEnemy();
     }
 

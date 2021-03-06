@@ -9,16 +9,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f541b8d3b6a7e9e4a835fd3ef78b7976, type: 3}
+  m_Script: {fileID: 11500000, guid: 2c5052dd3469db14ab640435f1f34511, type: 3}
   m_Name: Light
   m_EditorClassIdentifier: 
-  IdlerName: 0
+  IdlerName: 5
   Icon: {fileID: 21300000, guid: dc85c874b792f254aa959037c5c15971, type: 3}
+  clickerEffect: {fileID: 4076491974380804034, guid: 560e612f9fa8c7d49865271631dbc155, type: 3}
   DamageMantissa: 4.9
   DamageExponent: 5
-  CostMantissa: 1.8
+  CostMantissa: 1.81
   CostExponent: 6
-  ManaMantissa: 1.1
-  ManaExponent: 5
+  ManaMantissa: 8.6
+  ManaExponent: 4
   CostScale: 1.07
-  UpgradesUnlocked: 000000000000
+  idlerUpgrades:
+  - type: 3
+    amount: 0
+    unlocked: 0
+    CostMantissa: 9.850000381469727
+    CostExponent: 6
+  - type: 1
+    amount: 1.1
+    unlocked: 1
+    CostMantissa: 2
+    CostExponent: 7
+  - type: 1
+    amount: 1.1
+    unlocked: 0
+    CostMantissa: 5.900000095367432
+    CostExponent: 7
+  - type: 2
+    amount: 0.9
+    unlocked: 0
+    CostMantissa: 1.2000000476837158
+    CostExponent: 8
+  - type: 0
+    amount: 0.9
+    unlocked: 0
+    CostMantissa: 3.549999952316284
+    CostExponent: 8
+  - type: 2
+    amount: 0.9
+    unlocked: 0
+    CostMantissa: 1.7999999523162842
+    CostExponent: 9

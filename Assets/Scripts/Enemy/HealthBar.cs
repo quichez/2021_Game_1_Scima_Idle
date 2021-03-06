@@ -9,6 +9,7 @@ public class HealthBar : MonoBehaviour
     public static HealthBar Instance;
     public TextMeshProUGUI enemyName;
     public Image healthBar;
+    public TextMeshProUGUI healthText;
 
     private void Awake()
     {
@@ -27,5 +28,6 @@ public class HealthBar : MonoBehaviour
     {
         enemyName.text = Stage.Instance.CurrentEnemy.name;
         healthBar.fillAmount = Stage.Instance.CurrentEnemy.HealthPercentage;
+        healthText.text = Stage.Instance.CurrentEnemy.CurrentHealth.Rounded.ToString() + " / " + Stage.Instance.CurrentEnemy.Health.ToString();
     }
 }

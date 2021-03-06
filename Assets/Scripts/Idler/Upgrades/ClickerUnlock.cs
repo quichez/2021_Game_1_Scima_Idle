@@ -1,21 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
+
 public class ClickerUnlock : IdlerUpgrade
 {
-    public PlayerClicker playerClicker;
-
     private void Start()
-    {
-        GetComponent<Image>().sprite = Idler.IdlerObject.Icon;
+    {        
         _tooltipTrigger.EnableToolTip(true);
-        _tooltipTrigger.SetToolTipText(playerClicker.ToString() + ":   " + UpgradeCost.ToString(), playerClicker.Description());        
     }
 
-    public override void UnlockUpgrade()
+    public void SetIdler(Idler idler)
     {
-        base.UnlockUpgrade();
-        playerClicker.Unlock(true);
+        _idler = idler;
+        _image.sprite = _idler.IdlerObject.Icon;
+        //maybe for variety sake, use a foreach to find the clicker upgrade in the IdlerObject's upgrade list.
+        _tooltipTrigger.SetToolTipText(idler._playerClicker.ClickerName + ": " + idler.IdlerObject.idlerUpgrades[0].UpgradeCost.ToString(), idler._playerClicker.Description);
     }
+
 }

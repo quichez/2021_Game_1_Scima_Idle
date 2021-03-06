@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
+using PlayerClickers;
 
 public enum IdlerName
 {
@@ -13,7 +12,9 @@ public enum IdlerName
     [EnumMember(Value = "Fire")] Fire,
     [EnumMember(Value = "Lightning")] Lightning,
     [EnumMember(Value = "Light")] Light,
-    [EnumMember(Value = "Dark")] Dark
+    [EnumMember(Value = "Dark")] Dark,
+    [EnumMember(Value = "Fairy")] Fairy,
+    [EnumMember(Value = "Spectral")] Spectral
 }
 
 public enum IdlerStat
@@ -23,171 +24,99 @@ public enum IdlerStat
     [EnumMember(Value = "cost")] Cost
 }
 
-public class Idler : MonoBehaviour
+public class Idler
 {
-    public IdlerObject IdlerObject;
+    private PlayerIdlers _playerIdler;
 
-    //public int Level => GetModifiedLevel();
-    public BigNumber Damage;
-    public BigNumber Mana => GetModifiedTotalMana().Rounded;
-    public BigNumber Cost;
+    public BigNumber Damage { get; private set; }
+    public BigNumber Mana { get; private set; }
+    public BigNumber Cost { get; private set; }
 
-    private List<float> TotalDamageModifiers = new List<float>(20);
-    private List<float> TotalManaModifiers = new List<float>(20);
-    private List<float> TotalCostModifier = new List<float>(20);
+    public IdlerObject IdlerObject { get; }
 
-    [Header("Idler Information")]
-    public Image Icon;
-    public TextMeshProUGUI IdlerName;
-    public TextMeshProUGUI LevelText;
-    public TextMeshProUGUI DamageText;
-    public TextMeshProUGUI ManaText;
+    public delegate void OnIdlerUpdate();
+    public OnIdlerUpdate OnLevelUpCallback;
+    public OnIdlerUpdate OnDamageUpdateCallback;
 
-    private IdlerUpgradeGroup IdlerUpgrades => GetComponentInChildren<IdlerUpgradeGroup>();
-    private IdlerLevelUpButton _button => GetComponentInChildren<IdlerLevelUpButton>();
+    private List<float> _damageModifiers = new List<float>(20);
+    private List<float> _manaModifiers = new List<float>(20);
+    private List<float> _costModifiers = new List<float>(20);
 
-    private void Start()
+    public PlayerClicker _playerClicker { get; }
+
+    public Idler(IdlerObject idob, PlayerIdlers master)
     {
-        int ind = transform.GetSiblingIndex();
-        
-        IdlerObject.Index = ind;
-        SaveManager.TrackIdlerObject(IdlerObject);
-        Icon.sprite = IdlerObject.Icon;
-        Player.Instance.OnInventoryUpdateCallback += ModifyTotalDamage;
-        Player.Instance.OnGoldUpdateCallback += ModifyTotalCost;
-        Player.Instance.OnInventoryUpdateCallback += UpdateTextFields;        
+        IdlerObject = idob;
+        _playerIdler = master;
+        _playerClicker = PlayerClickerFactory.GetClicker(IdlerObject.name);
 
-        //Load The Game
-        if(SaveManager.Instance?.Cache!=null)
-        {            
-            IdlerObject.Level = SaveManager.Instance.Cache.IdlerLevels[ind];
-            IdlerObject.UpgradesUnlocked = SaveManager.Instance.Cache.UpgradesUnlocked[ind];
-            IdlerUpgrades.OnLoad();
-            ModifyTotalDamage();
-            ModifyTotalCost();
-            _button.UpdateButtonText();
-        }
-        else
-        {
-            IdlerObject.Level = 0;
-            IdlerObject.ResetObject();
-            ModifyTotalDamage();
-            ModifyTotalCost();
-            _button.UpdateButtonText();
-        }        
+        UpdateIdler();
+
+
+        OnLevelUpCallback += UpdateIdler;
+        OnLevelUpCallback += _playerIdler.UpdateTotalIdlerDamage;
+        OnLevelUpCallback += _playerIdler.UpdateTotalIdlerManaCost;
+        Player.Instance.OnEquipCallback += UpdateIdler;        
     }
 
-    public void ModifyTotalDamage()
+    public void LevelUp(int amount=1)
     {
-        //Start with initial values
-        Damage = IdlerObject.BaseDamage;
-        TotalDamageModifiers.Clear();
-
-        //Add IdlerDamageUpgades to TotalDamageModifiers
-        TotalDamageModifiers.AddRange(IdlerUpgrades?.GetIdlerDamageUpgrades());
-        List<Equipment> playerEquipped = Player.Instance?.Inventory?.EquippedItems;
-
-        //Wrapped in null check for OnEnable
-        if(playerEquipped != null)
-        {
-            foreach (Equipment equipment in Player.Instance.Inventory.EquippedItems)
-            {
-                if(equipment.ID != -1)
-                {
-                    foreach (EquipmentStat stat in equipment.Stats)
-                    {
-                    
-                       if (stat.Idler == (IdlerName)System.Enum.Parse(typeof(IdlerName), IdlerObject.name))
-                       {
-                            if (stat.Stat == IdlerStat.Damage)
-                                TotalDamageModifiers.Add(stat.Amount);
-                       }
-                    }
-                }
-            }
-        }
-        if(TotalDamageModifiers != null)
-        {
-            foreach (float value in TotalDamageModifiers)
-            {
-                Damage *= value;
-            }
-        }
-        BigNumber.RoundBigNumber(Damage);
-        UpdateTextFields();
+        IdlerObject.Level += amount;
+        Player.Instance.ChangeGold(-Cost);
+        OnLevelUpCallback?.Invoke();        
     }
 
-    public BigNumber GetModifiedTotalMana()
+    public void UpdateIdler()
     {
-        TotalManaModifiers.Clear();
-        BigNumber mana = IdlerObject.BaseMana;
-        TotalManaModifiers = IdlerUpgrades?.GetIdlerManaUpgrades();
-        if(TotalManaModifiers != null)
-        {
-            foreach (float value in TotalManaModifiers)
-            {
-                mana *= value;
-            }
-        }
-        return mana;
+        Damage = ModifiedTotalDamage();
+        Mana = IdlerObject.BaseMana;
+        Cost = IdlerObject.BaseCost;        
     }
 
-    public void ModifyTotalCost()
+    public BigNumber ModifiedTotalDamage()
     {
-        Cost = IdlerObject.BaseCost;
-        TotalCostModifier.Clear();
-
-        TotalCostModifier.AddRange(IdlerUpgrades?.GetIdlerCostUpgrades());
-
+        BigNumber dmg = IdlerObject.BaseDamage;
+        _damageModifiers.Clear();
         foreach (Equipment equipment in Player.Instance.Inventory.EquippedItems)
         {
-            if (equipment.ID != -1)
+            if(equipment.ID != -1)
             {
                 foreach (EquipmentStat stat in equipment.Stats)
                 {
-
-                    if (stat.Idler == (IdlerName)System.Enum.Parse(typeof(IdlerName), IdlerObject.name))
-                    {
-                        if (stat.Stat == IdlerStat.Cost)
-                            TotalCostModifier.Add(stat.Amount);
-                    }
+                    if (stat.Idler == IdlerObject.IdlerName)
+                        dmg *= stat.Amount;
                 }
             }
-        }
-        if (TotalCostModifier != null)
+        }        
+        return dmg.Rounded;
+    }
+
+    public BigNumber ModifiedTotalMana()
+    {
+        return BigNumber.Zero;
+    }
+
+    public BigNumber ModifiedTotalCost()
+    {
+        return BigNumber.Zero;
+    }
+   
+    /// <summary>
+    /// Load data for this class
+    /// </summary>
+    public void LoadData(int level = 0)
+    {
+        IdlerObject.Level = level;
+        OnLevelUpCallback?.Invoke();
+    }
+
+    public void LoadData(bool[] upgradesUnlocked, int level = 0)
+    {
+        IdlerObject.Level = level;
+        for (int i = 0; i < IdlerObject.idlerUpgrades.Length; i++)
         {
-            foreach (float value in TotalCostModifier)
-            {
-                Cost *= value;
-            }
+            IdlerObject.idlerUpgrades[i].unlocked = upgradesUnlocked[i];
         }
-        BigNumber.RoundBigNumber(Cost);
-        UpdateTextFields();
-    }
-
-    public void UpdateTextFields()
-    {
-        if(IdlerName != null && LevelText != null && DamageText != null && ManaText != null)
-        {
-            IdlerName.text = IdlerObject.name;
-            LevelText.text = "Level " + IdlerObject.Level.ToString();
-            DamageText.text = Damage.ToString() + " DPS";
-            ManaText.text = Mana.ToString() + " MPS";
-        }
-    }
-
-
-    public void ResetIdlerObject()
-    {
-        IdlerObject.ResetObject();
-        ModifyTotalDamage();
-        ModifyTotalCost();
-        UpdateTextFields();
-        _button.UpdateButtonText();
-    }
-
-    private void OnEnable()
-    {
-        ModifyTotalDamage();
+        OnLevelUpCallback?.Invoke();
     }
 }

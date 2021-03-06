@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c5052dd3469db14ab640435f1f34511, type: 3}
+  m_Name: Spectral
+  m_EditorClassIdentifier: 
+  IdlerName: 8
+  Icon: {fileID: 21300000, guid: c9a86506fb8aecf4aa060c77969fe12c, type: 3}
+  clickerEffect: {fileID: 0}
+  DamageMantissa: 6.5
+  DamageExponent: 7
+  CostMantissa: 4.06
+  CostExponent: 8
+  ManaMantissa: 9.5
+  ManaExponent: 6
+  CostScale: 1.1
+  idlerUpgrades:
+  - type: 3
+    amount: 0
+    unlocked: 0
+    CostMantissa: 4.400000095367432
+    CostExponent: 9
+  - type: 0
+    amount: 0.9
+    unlocked: 0
+    CostMantissa: 8.800000190734863
+    CostExponent: 9
+  - type: 1
+    amount: 1.2
+    unlocked: 0
+    CostMantissa: 2.6500000953674316
+    CostExponent: 10
+  - type: 1
+    amount: 1.2
+    unlocked: 0
+    CostMantissa: 5.28000020980835
+    CostExponent: 10
+  - type: 2
+    amount: 0.9
+    unlocked: 0
+    CostMantissa: 1.600000023841858
+    CostExponent: 11
+  - type: 0
+    amount: 0.95
+    unlocked: 0
+    CostMantissa: 7.949999809265137
+    CostExponent: 11

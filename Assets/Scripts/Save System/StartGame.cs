@@ -9,7 +9,7 @@ public class StartGame : MonoBehaviour
     {
         Debug.Log(Application.persistentDataPath);
         SaveManager.LoadGame();
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(2);
     }
     
     public void SaveTheGame()

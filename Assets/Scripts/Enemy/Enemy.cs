@@ -61,7 +61,6 @@ public class Enemy : MonoBehaviour
     public void Death()
     {
         IsDying = true;
-
         _lootTable.DropItem();
         Destroy(gameObject, 0.25f);
         OnEnemyHealthUpdated = null;
